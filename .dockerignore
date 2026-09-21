@@ -1,0 +1,15 @@
+chunk_faiss.index
+chunks_linked_entities_inginf_updated_2.json
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.git
+.gitignore
+.vscode
+.venv
+env
+venv
+*.log
+tests
+.pytest_cache

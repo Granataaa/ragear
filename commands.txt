@@ -1,0 +1,13 @@
+# 1. Avvio locale dell'applicazione
+uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+
+# 2. Esecuzione test unitari
+pytest tests -v
+
+# 3. Benchmark sulle query degli studenti
+python scripts/benchmark_queries.py --limit 5
+
+# 4. Avvio con Docker Compose
+docker compose up -d --build
+docker compose logs -f
+docker compose down

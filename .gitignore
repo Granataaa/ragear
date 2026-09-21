@@ -1,0 +1,36 @@
+# Environment and secrets
+.env
+*.local.env
+
+# Large legacy data files (legacy FAISS index & heavy 230MB raw json)
+chunk_faiss.index
+chunks_linked_entities_inginf_updated_2.json
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary scratch files & logs
+scratch/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db

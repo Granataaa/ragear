@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="RAGEAR: Sistema di Raccomandazione Corsi Universitari basato sull'algoritmo RAGER e integrato con il server UNINETTUNO RAG.">
+    <title>UNINETTUNO RAGEAR - Course Recommender</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+</head>
+
+<body>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="brand">
+                <div class="brand-icon">🎓</div>
+                <div>
+                    <div class="brand-title">UNINETTUNO <span>RAGEAR</span></div>
+                    <div class="brand-subtitle">Course Recommendation Engine</div>
+                </div>
+            </a>
+
+            <div class="navbar-actions">
+                <div id="ragStatusPill" class="status-pill offline"
+                    title="Stato della connessione al backend RAG centrale">
+                    <span class="status-dot"></span>
+                    <span id="ragStatusText">Verifica Server RAG...</span>
+                </div>
+
+                <a href="http://10.10.11.141:3000/" target="_blank" rel="noreferrer" class="nav-link"
+                    title="Apri il portale UNINETTUNO RAG Explorer">
+                    🌐 RAG Explorer
+                </a>
+                <a href="/docs" target="_blank" class="nav-link" title="Documentazione interattiva OpenAPI / Swagger">
+                    📄 API Swagger
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Application -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Trova il corso universitario perfetto per te</h1>
+            <p>Descrivi i tuoi interessi, le competenze che vuoi acquisire o gli argomenti di cui vorresti approfondire
+                le conoscenze. RAGEAR calcola il miglior percorso accademico.</p>
+        </section>
+
+        <!-- Search Card -->
+        <section class="search-card">
+            <div class="search-input-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" class="search-input"
+                    placeholder="Es: Vorrei imparare a progettare basi di dati relazionali, SQL e sviluppare applicazioni in Java..."
+                    autocomplete="off" aria-label="Argomenti di interesse per la raccomandazione dei corsi">
+                <button type="button" id="clearSearchBtn" class="clear-search-btn" title="Cancella ricerca">✕</button>
+            </div>
+
+            <div class="search-actions">
+                <button type="button" id="toggleFiltersBtn" class="btn-toggle-filters">
+                    <span>⚙️ Filtri Accademici</span>
+                    <span id="filterBadgeCount" class="filter-badge-count" style="display: none;">0</span>
+                </button>
+
+                <button type="button" id="searchBtn" class="btn-search">
+                    <span>Trova Corsi Consigliati</span>
+                    <span>→</span>
+                </button>
+            </div>
+
+            <!-- Expandable Filters Drawer -->
+            <div id="filtersDrawer" class="filters-drawer">
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="filterFaculty" class="filter-label">Facoltà</label>
+                        <select id="filterFaculty" class="filter-select">
+                            <option value="">Tutte le Facoltà</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filterCfu" class="filter-label">CFU del Corso</label>
+                        <select id="filterCfu" class="filter-select">
+                            <option value="">Tutti i CFU</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filterDegreeType" class="filter-label">Livello Corso di Laurea</label>
+                        <select id="filterDegreeType" class="filter-select">
+                            <option value="">Tutti i Livelli</option>
+                            <option value="triennale">Laurea Triennale</option>
+                            <option value="magistrale">Laurea Magistrale</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filterSettore" class="filter-label">Settore Disciplinare</label>
+                        <select id="filterSettore" class="filter-select">
+                            <option value="">Tutti i Settori</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="topKSlider" class="filter-label">
+                            <span>Top Chunk Semantici</span>
+                            <span id="topKVal" class="top-k-val">50</span>
+                        </label>
+                        <div class="top-k-slider-wrapper">
+                            <input type="range" id="topKSlider" class="top-k-slider" min="20" max="100" step="10"
+                                value="50">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filters-footer">
+                    <button type="button" id="resetFiltersBtn" class="btn-reset-filters">Ripristina tutti i
+                        filtri</button>
+                </div>
+            </div>
+
+            <!-- Query Chips -->
+            <div class="query-chips-wrapper">
+                <div class="chips-label">Oppure seleziona un argomento di esempio:</div>
+                <div id="sampleChips" class="query-chips">
+                    <!-- Loaded dynamically from API -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Container -->
+        <section id="resultsContainer">
+            <div class="state-box">
+                <div class="state-icon">💡</div>
+                <div class="state-title">Inserisci una domanda o scegli un argomento</div>
+                <div class="state-desc">RAGEAR interrogherà il server RAG centrale con oltre 4.300 video-lezioni e 225
+                    corsi accademici per trovare i percorsi formativi più pertinenti.</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p><strong>RAGEAR</strong> — Progetto di Ricerca in collaborazione UNICT &amp; CNR-ISTC.</p>
+        <p style="margin-top: 0.35rem;">
+            Integrato con <a href="http://10.10.11.141:3000/" target="_blank" rel="noreferrer">UNINETTUNO RAG Engine</a>
+            •
+            Documentazione API <a href="/docs" target="_blank">Swagger UI</a>
+        </p>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>
