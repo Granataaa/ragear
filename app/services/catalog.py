@@ -139,20 +139,16 @@ class CatalogService:
 
                 c_entry = self.catalog[c_title]
                 if facolta:
-                    existing_f = [f.strip() for f in c_entry["facolta"].split(",") if f.strip()] if c_entry["facolta"] else []
-                    new_f = [f.strip() for f in facolta.split(",") if f.strip()]
-                    for nf in new_f:
-                        if nf not in existing_f:
-                            existing_f.append(nf)
-                    c_entry["facolta"] = ", ".join(existing_f)
+                    if not c_entry["facolta"]:
+                        c_entry["facolta"] = facolta
+                    elif facolta not in c_entry["facolta"]:
+                        c_entry["facolta"] = f"{c_entry['facolta']}, {facolta}"
 
                 if corso_laurea:
-                    existing_c = [c.strip() for c in c_entry["corso_laurea"].split(",") if c.strip()] if c_entry["corso_laurea"] else []
-                    new_c = [c.strip() for c in corso_laurea.split(",") if c.strip()]
-                    for nc in new_c:
-                        if nc not in existing_c:
-                            existing_c.append(nc)
-                    c_entry["corso_laurea"] = ", ".join(existing_c)
+                    if not c_entry["corso_laurea"]:
+                        c_entry["corso_laurea"] = corso_laurea
+                    elif corso_laurea not in c_entry["corso_laurea"]:
+                        c_entry["corso_laurea"] = f"{c_entry['corso_laurea']}, {corso_laurea}"
 
                 if c_entry["cfu"] is None and cfu_val is not None:
                     c_entry["cfu"] = cfu_val

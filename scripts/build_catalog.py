@@ -68,14 +68,41 @@ def build_catalog(csv_path: str, output_path: str):
                 if m:
                     lez_num = int(m.group(1))
 
+            # Fallback for courses where facolta or corso_laurea were left blank in CSV
+            if not facolta:
+                indirizzo_link = row.get("indirizzo_link", "")
+                if "giurisprudenza" in indirizzo_link.lower() or "faculty=1" in link_corso:
+                    facolta = "Giurisprudenza"
+                elif "ingegneria" in indirizzo_link.lower() or "faculty=2" in link_corso or "faculty=3" in link_corso:
+                    facolta = "Facoltà di Ingegneria on line"
+                elif "economia" in indirizzo_link.lower():
+                    facolta = "Economia"
+                elif "comunicazione" in indirizzo_link.lower():
+                    facolta = "Scienze della Comunicazione"
+                elif "psicologia" in indirizzo_link.lower() or "faculty=4" in link_corso:
+                    facolta = "Psicologia"
+                elif "beni-culturali" in indirizzo_link.lower() or "faculty=5" in link_corso:
+                    facolta = "Beni Culturali"
+
+            if not corso_laurea:
+                cdsaa = row.get("cdsAa", "")
+                if cdsaa:
+                    m = re.match(r'^(.*?)(?:\s*\(A\.A\.|\s*-\s*)', cdsaa)
+                    if m and m.group(1).strip():
+                        corso_laurea = m.group(1).strip()
+
+            if not tipologia and corso_laurea:
+                if "diritto dell'impresa" in corso_laurea.lower():
+                    tipologia = "triennale"
+
             # Initialize course entry if new
             if course_title not in catalog:
                 catalog[course_title] = {
                     "course_id": re.sub(r'[^a-zA-Z0-9]', '', course_title),
                     "course_title": course_title,
-                    "facolta": facolta,
-                    "corso_laurea": corso_laurea,
-                    "tipologia": tipologia,
+                    "facolta_set": set(),
+                    "cdl_set": set(),
+                    "tipologia_set": set(),
                     "cfu": cfu_val,
                     "settore": settore,
                     "link_corso": link_corso,
@@ -85,24 +112,12 @@ def build_catalog(csv_path: str, output_path: str):
 
             course_entry = catalog[course_title]
 
-            # Merge faculties if course is present in multiple faculties
             if facolta:
-                existing_facs = [f.strip() for f in course_entry["facolta"].split(",") if f.strip()] if course_entry["facolta"] else []
-                if facolta not in existing_facs:
-                    existing_facs.append(facolta)
-                    course_entry["facolta"] = ", ".join(existing_facs)
-
-            # Merge degree courses if course is shared across multiple degrees
+                course_entry["facolta_set"].add(facolta)
             if corso_laurea:
-                existing_cdls = [c.strip() for c in course_entry["corso_laurea"].split(",") if c.strip()] if course_entry["corso_laurea"] else []
-                if corso_laurea not in existing_cdls:
-                    existing_cdls.append(corso_laurea)
-                    course_entry["corso_laurea"] = ", ".join(existing_cdls)
-
-            if not course_entry["tipologia"] and tipologia:
-                course_entry["tipologia"] = tipologia
-            elif tipologia and tipologia not in course_entry["tipologia"]:
-                course_entry["tipologia"] = f"{course_entry['tipologia']}, {tipologia}"
+                course_entry["cdl_set"].add(corso_laurea)
+            if tipologia:
+                course_entry["tipologia_set"].add(tipologia)
 
             if course_entry["cfu"] is None and cfu_val is not None:
                 course_entry["cfu"] = cfu_val
@@ -134,9 +149,9 @@ def build_catalog(csv_path: str, output_path: str):
         serialized_catalog[course_title] = {
             "course_id": c["course_id"],
             "course_title": c["course_title"],
-            "facolta": c["facolta"],
-            "corso_laurea": c["corso_laurea"],
-            "tipologia": c["tipologia"],
+            "facolta": ", ".join(sorted(c["facolta_set"])),
+            "corso_laurea": ", ".join(sorted(c["cdl_set"])),
+            "tipologia": ", ".join(sorted(c["tipologia_set"])),
             "cfu": c["cfu"],
             "settore": c["settore"],
             "link_corso": c["link_corso"],
