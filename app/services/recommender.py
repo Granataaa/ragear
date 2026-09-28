@@ -26,16 +26,60 @@ ITALIAN_STOPWORDS = {
     "lezioni", "universita", "esame", "esami", "imparare", "studiare"
 }
 
-def format_timestamp(seconds: float) -> str:
+def parse_timestamp_to_seconds(val: Any) -> float:
     """
-    Format seconds (e.g. 754.0) into HH:MM:SS format (e.g. 00:12:34).
+    Parse a timestamp value into seconds as float.
+    Handles numeric seconds (e.g. 145.2), strings like '00:02:25.2' or '02:25',
+    or strings like changeVideoPos('00:00:45.0', 1).
+    """
+    if val is None:
+        return 0.0
+    if isinstance(val, (int, float)):
+        return max(0.0, float(val))
+    val_str = str(val).strip()
+    if not val_str:
+        return 0.0
+
+    # Match changeVideoPos('00:00:45.0', 1)
+    m_cvp = re.search(r"changeVideoPos\s*\(\s*['\"]([^'\"]+)['\"]", val_str)
+    if m_cvp:
+        val_str = m_cvp.group(1).strip()
+
+    # Try pure float string: '145.2'
+    try:
+        return max(0.0, float(val_str))
+    except ValueError:
+        pass
+
+    # Try HH:MM:SS or MM:SS format: '01:23:45.5' or '12:34'
+    parts = val_str.split(":")
+    try:
+        if len(parts) == 3:
+            h = float(parts[0])
+            m = float(parts[1])
+            s = float(parts[2])
+            return max(0.0, h * 3600 + m * 60 + s)
+        elif len(parts) == 2:
+            m = float(parts[0])
+            s = float(parts[1])
+            return max(0.0, m * 60 + s)
+    except ValueError:
+        pass
+
+    return 0.0
+
+def format_timestamp(seconds: float, compact: bool = False) -> str:
+    """
+    Format seconds (e.g. 754.0) into HH:MM:SS format (or MM:SS if compact and < 1h).
     """
     if seconds is None or seconds < 0:
-        return "00:00:00"
+        return "00:00" if compact else "00:00:00"
     total_sec = int(round(seconds))
     hrs = total_sec // 3600
     mins = (total_sec % 3600) // 60
     secs = total_sec % 60
+    if compact and hrs == 0:
+        return f"{mins:02d}:{secs:02d}"
     return f"{hrs:02d}:{mins:02d}:{secs:02d}"
 
 class RAGERRecommender:
@@ -245,10 +289,20 @@ class RAGERRecommender:
                 seen_lessons.add(lez_id)
 
                 meta = ch.get("metadata") or {}
-                start_sec = float(ch.get("start_time") or meta.get("start_time") or 0.0)
-                end_sec = float(ch.get("end_time") or meta.get("end_time") or 0.0)
-                
-                formatted_time = f"{format_timestamp(start_sec)} - {format_timestamp(end_sec)}"
+                raw_start = ch.get("start_time") if ch.get("start_time") is not None else meta.get("start_time")
+                raw_end = ch.get("end_time") if ch.get("end_time") is not None else meta.get("end_time")
+
+                start_sec = parse_timestamp_to_seconds(raw_start)
+                end_sec = parse_timestamp_to_seconds(raw_end)
+
+                if start_sec > 0 and (end_sec <= start_sec or end_sec == 0.0):
+                    end_sec = start_sec + 60.0
+
+                if start_sec > 0 or end_sec > 0:
+                    formatted_time = f"{format_timestamp(start_sec)} - {format_timestamp(end_sec)}"
+                else:
+                    formatted_time = "Inizio lezione"
+
                 snippet = ch.get("text", "").strip()
                 if len(snippet) > 280:
                     snippet = snippet[:280] + "..."
@@ -258,11 +312,12 @@ class RAGERRecommender:
                     lesson_number=lez_num,
                     video_url=vid_url or ch.get("source"),
                     link_lezione=link_lez or None,
-                    start_time=start_sec,
-                    end_time=end_sec,
+                    start_time=round(start_sec, 1),
+                    end_time=round(end_sec, 1),
                     formatted_time=formatted_time,
                     snippet=snippet,
-                    score=round(ch["computed_score"], 4)
+                    score=round(ch["computed_score"], 4),
+                    estimated_duration=2700.0
                 ))
 
             # Retrieve academic course metadata

@@ -346,22 +346,70 @@ function renderResults(data) {
         let lessonsHtml = "";
         if (course.matched_lessons && course.matched_lessons.length > 0) {
             const items = course.matched_lessons.map(l => {
-                const videoBtn = l.video_url
-                    ? `<a href="${escapeHtml(l.video_url)}" target="_blank" rel="noreferrer" class="btn-video">▶️ Guarda Video</a>`
+                const hasTime = (l.start_time > 0 || l.end_time > 0);
+                const startTimeFmt = formatTimeCompact(l.start_time);
+                const deepLinkUrl = l.video_url
+                    ? (l.start_time > 0 ? `${l.video_url}#t=${Math.floor(l.start_time)}` : l.video_url)
                     : "";
+
+                // Timeline visualization (if timestamps available)
+                let timelineBarHtml = "";
+                if (hasTime) {
+                    const estDuration = l.estimated_duration || 2700; // ~45 min default
+                    const effectiveTotal = Math.max(estDuration, (l.end_time || l.start_time) + 300);
+                    const leftPct = Math.min(95, Math.max(0, (l.start_time / effectiveTotal) * 100));
+                    const widthPct = Math.min(100 - leftPct, Math.max(3.0, (((l.end_time || (l.start_time + 60)) - l.start_time) / effectiveTotal) * 100));
+
+                    timelineBarHtml = `
+                        <div class="lesson-timeline-container" title="Spezzone dal min ${startTimeFmt}">
+                            <div class="lesson-timeline-header">
+                                <span>⏱️ Segmento nel video: <strong>${escapeHtml(l.formatted_time)}</strong></span>
+                                <span class="timeline-duration-label">Lezione: ~45 min</span>
+                            </div>
+                            <div class="lesson-timeline-track" onclick="openVideoModal('${escapeAttr(l.video_url)}', ${l.start_time}, ${l.end_time}, '${escapeAttr(l.lesson_title)}', '${escapeAttr(course.course_title)}', '${escapeAttr(l.snippet)}')">
+                                <div class="lesson-timeline-segment" style="left: ${leftPct.toFixed(1)}%; width: ${widthPct.toFixed(1)}%;"></div>
+                                <div class="lesson-timeline-marker" style="left: ${leftPct.toFixed(1)}%;"></div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                // Action buttons
+                let modalBtn = "";
+                let directTabBtn = "";
+                if (l.video_url) {
+                    const modalLabel = hasTime ? `🎬 Guarda Spezzone (min ${startTimeFmt})` : `🎬 Guarda Video`;
+                    modalBtn = `
+                        <button type="button" class="btn-video-modal" onclick="openVideoModal('${escapeAttr(l.video_url)}', ${l.start_time}, ${l.end_time}, '${escapeAttr(l.lesson_title)}', '${escapeAttr(course.course_title)}', '${escapeAttr(l.snippet)}', '${escapeAttr(l.link_lezione || '')}')">
+                            ${modalLabel}
+                        </button>
+                    `;
+                    directTabBtn = `
+                        <a href="${escapeHtml(deepLinkUrl)}" target="_blank" rel="noreferrer" class="btn-video-tab" title="Apri video in nuova scheda dal min ${startTimeFmt}">
+                            ↗️ Nuova Scheda
+                        </a>
+                    `;
+                }
+
                 const lezLinkBtn = l.link_lezione
                     ? `<a href="${escapeHtml(l.link_lezione)}" target="_blank" rel="noreferrer" class="btn-uninettuno-link">🔗 Scheda Lezione</a>`
+                    : "";
+
+                const timeBadge = hasTime
+                    ? `<span class="lesson-time">⏱️ ${escapeHtml(l.formatted_time)}</span>`
                     : "";
 
                 return `
                     <div class="lesson-item">
                         <div class="lesson-item-header">
                             <span class="lesson-item-title">${escapeHtml(l.lesson_title)}</span>
-                            <span class="lesson-time">⏱️ ${l.formatted_time}</span>
+                            ${timeBadge}
                         </div>
+                        ${timelineBarHtml}
                         ${l.snippet ? `<div class="lesson-snippet">"${escapeHtml(l.snippet)}"</div>` : ""}
                         <div class="lesson-actions">
-                            ${videoBtn}
+                            ${modalBtn}
+                            ${directTabBtn}
                             ${lezLinkBtn}
                         </div>
                     </div>
@@ -433,6 +481,160 @@ function toggleAccordion(id) {
     }
 }
 
+/* ==========================================================================
+   Video Player Modal & Time Helpers
+   ========================================================================== */
+
+let currentHls = null;
+
+function formatTimeCompact(seconds) {
+    if (!seconds || seconds <= 0) return "00:00";
+    const total = Math.floor(seconds);
+    const hrs = Math.floor(total / 3600);
+    const mins = Math.floor((total % 3600) / 60);
+    const secs = total % 60;
+    if (hrs > 0) {
+        return `${hrs}:${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+    return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+}
+
+function openVideoModal(videoUrl, startTime, endTime, lessonTitle, courseTitle, snippet, lessonLink) {
+    if (!videoUrl) return;
+
+    const modal = document.getElementById("videoModal");
+    const video = document.getElementById("modalVideoPlayer");
+    const titleEl = document.getElementById("modalLessonTitle");
+    const courseEl = document.getElementById("modalCourseTitle");
+    const timeBadge = document.getElementById("modalTimeBadge");
+    const snippetEl = document.getElementById("modalSnippetText");
+    const directLink = document.getElementById("modalDirectLinkBtn");
+    const statusEl = document.getElementById("modalVideoStatus");
+    const statusCyberspazioBtn = document.getElementById("modalStatusCyberspazioBtn");
+    const statusDirectBtn = document.getElementById("modalStatusDirectBtn");
+    const footerCyberspazioBtn = document.getElementById("modalCyberspazioFooterBtn");
+
+    titleEl.textContent = lessonTitle || "Video Lezione";
+    courseEl.textContent = courseTitle || "UNINETTUNO";
+    snippetEl.textContent = snippet ? `"${snippet}"` : "Trascrizione del punto saliente spiegato dal docente nel video.";
+
+    const startFmt = formatTimeCompact(startTime);
+    const endFmt = formatTimeCompact(endTime);
+    if (startTime > 0 || endTime > 0) {
+        timeBadge.textContent = `⏱️ Minutaggio: ${startFmt} - ${endFmt}`;
+    } else {
+        timeBadge.textContent = "⏱️ Inizio Lezione";
+    }
+
+    // Direct link with media fragment deep-link #t=
+    const deepLink = startTime > 0 ? `${videoUrl}#t=${Math.floor(startTime)}` : videoUrl;
+    if (directLink) directLink.href = deepLink;
+    if (statusDirectBtn) statusDirectBtn.href = deepLink;
+
+    if (lessonLink) {
+        if (statusCyberspazioBtn) {
+            statusCyberspazioBtn.href = lessonLink;
+            statusCyberspazioBtn.style.display = "inline-flex";
+        }
+        if (footerCyberspazioBtn) {
+            footerCyberspazioBtn.href = lessonLink;
+            footerCyberspazioBtn.style.display = "inline-flex";
+        }
+    } else {
+        if (statusCyberspazioBtn) statusCyberspazioBtn.style.display = "none";
+        if (footerCyberspazioBtn) footerCyberspazioBtn.style.display = "none";
+    }
+
+    // Reset previous HLS instance if any
+    if (currentHls) {
+        currentHls.destroy();
+        currentHls = null;
+    }
+    video.pause();
+    video.removeAttribute("src");
+    video.style.display = "block";
+    statusEl.style.display = "none";
+
+    const isHls = videoUrl.includes(".m3u8");
+
+    if (isHls && window.Hls && Hls.isSupported()) {
+        currentHls = new Hls({ startPosition: startTime > 0 ? startTime : 0 });
+        currentHls.loadSource(videoUrl);
+        currentHls.attachMedia(video);
+        currentHls.on(Hls.Events.MANIFEST_PARSED, function () {
+            if (startTime > 0) {
+                video.currentTime = startTime;
+            }
+            video.play().catch(() => {});
+        });
+        currentHls.on(Hls.Events.ERROR, function (event, data) {
+            if (data.fatal) {
+                statusEl.style.display = "flex";
+                video.style.display = "none";
+            }
+        });
+    } else {
+        // Native MP4 (or Safari native HLS)
+        video.src = deepLink;
+        video.load();
+
+        const seekAndPlay = () => {
+            if (startTime > 0) {
+                try {
+                    video.currentTime = startTime;
+                } catch (e) {}
+            }
+            video.play().catch(() => {});
+        };
+
+        video.onloadedmetadata = seekAndPlay;
+        video.onerror = () => {
+            statusEl.style.display = "flex";
+            video.style.display = "none";
+        };
+    }
+
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+
+function closeVideoModal() {
+    const modal = document.getElementById("videoModal");
+    const video = document.getElementById("modalVideoPlayer");
+    const statusEl = document.getElementById("modalVideoStatus");
+    if (currentHls) {
+        currentHls.destroy();
+        currentHls = null;
+    }
+    if (video) {
+        video.pause();
+        video.src = "";
+        video.style.display = "block";
+    }
+    if (statusEl) {
+        statusEl.style.display = "none";
+    }
+    if (modal) {
+        modal.style.display = "none";
+    }
+    document.body.style.overflow = "";
+}
+
+function handleModalBackdropClick(event) {
+    if (event.target.id === "videoModal") {
+        closeVideoModal();
+    }
+}
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        const modal = document.getElementById("videoModal");
+        if (modal && modal.style.display !== "none") {
+            closeVideoModal();
+        }
+    }
+});
+
 function escapeHtml(str) {
     if (!str) return "";
     return str
@@ -441,4 +643,13 @@ function escapeHtml(str) {
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
+}
+
+function escapeAttr(str) {
+    if (!str) return "";
+    return str
+        .replace(/\\/g, "\\\\")
+        .replace(/'/g, "\\'")
+        .replace(/"/g, "&quot;")
+        .replace(/\r?\n/g, " ");
 }

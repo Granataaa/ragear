@@ -25,6 +25,16 @@ def test_weighted_rank_sum(recommender):
     val = recommender.weighted_rank_sum(ranks, k)
     assert pytest.approx(val, 0.0001) == expected
 
+def test_parse_timestamp_to_seconds():
+    from app.services.recommender import parse_timestamp_to_seconds
+    assert parse_timestamp_to_seconds(125.4) == 125.4
+    assert parse_timestamp_to_seconds("125.4") == 125.4
+    assert parse_timestamp_to_seconds("02:05") == 125.0
+    assert parse_timestamp_to_seconds("01:02:05") == 3725.0
+    assert parse_timestamp_to_seconds("changeVideoPos('00:02:05.0', 1)") == 125.0
+    assert parse_timestamp_to_seconds(None) == 0.0
+    assert parse_timestamp_to_seconds("") == 0.0
+
 @pytest.mark.asyncio
 async def test_recommend_with_mock_rag(recommender):
     # Mock RAG client response

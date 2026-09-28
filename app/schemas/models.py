@@ -26,6 +26,7 @@ class MatchedLesson(BaseModel):
     formatted_time: str = ""
     snippet: str = ""
     score: float = 0.0
+    estimated_duration: float = Field(2700.0, description="Durata stimata della lezione in secondi (~45 min)")
 
 class ScoreBreakdown(BaseModel):
     term_1_score_ratio: float = Field(..., description="Term 1: Quota di punteggio del corso rispetto al totale dei chunk")

@@ -38,8 +38,8 @@ def test_filter_courses_by_faculty(catalog_svc):
         info = catalog_svc.catalog[title]
         assert "ingegneria" in info["facolta"].lower()
 
-def test_sync_from_mock_rag_chunks():
-    svc = CatalogService("non_existent_file.json")
+def test_sync_from_mock_rag_chunks(tmp_path):
+    svc = CatalogService(str(tmp_path / "test_catalog.json"))
     mock_chunks = [
         {
             "chunk_id": "1",

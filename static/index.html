@@ -155,6 +155,58 @@
         </p>
     </footer>
 
+    <!-- Native Video Player Modal -->
+    <div id="videoModal" class="modal-overlay" style="display: none;" onclick="handleModalBackdropClick(event)">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalLessonTitle">
+            <div class="modal-header">
+                <div class="modal-header-info">
+                    <span class="modal-badge-time" id="modalTimeBadge">⏱️ 00:00 - 00:00</span>
+                    <h3 class="modal-title" id="modalLessonTitle">Titolo Video Lezione</h3>
+                    <div class="modal-subtitle" id="modalCourseTitle">Corso Universitario</div>
+                </div>
+                <button type="button" class="modal-close-btn" onclick="closeVideoModal()" aria-label="Chiudi player video">✕</button>
+            </div>
+            
+            <div class="modal-video-container">
+                <video id="modalVideoPlayer" controls preload="auto" playsinline></video>
+                <div id="modalVideoStatus" class="modal-video-status" style="display: none;">
+                    <div class="video-status-icon">🔒</div>
+                    <div class="video-status-title">Stream Protetto da Autenticazione UniNettuno</div>
+                    <div class="video-status-desc">
+                        I video risiedono su server <strong>AWS CloudFront</strong> (<code>streaming2.uninettunouniversity.net</code>) e richiedono credenziali o una sessione attiva di Ateneo su Cyberspazio.
+                    </div>
+                    <div class="video-status-actions">
+                        <a id="modalStatusCyberspazioBtn" href="#" target="_blank" rel="noreferrer" class="btn-status-cyberspazio">
+                            🎓 Apri Lezione su Cyberspazio
+                        </a>
+                        <a id="modalStatusDirectBtn" href="#" target="_blank" rel="noreferrer" class="btn-status-direct">
+                            ↗️ Apri stream diretto
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-snippet-box">
+                <div class="modal-snippet-label">🎯 Frammento Trascritto Rilevante:</div>
+                <div class="modal-snippet-text" id="modalSnippetText"></div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="modal-footer-left">
+                    <a id="modalCyberspazioFooterBtn" href="#" target="_blank" rel="noreferrer" class="btn-footer-cyberspazio" style="display: none;">
+                        🎓 Scheda Cyberspazio
+                    </a>
+                    <a id="modalDirectLinkBtn" href="#" target="_blank" rel="noreferrer" class="btn-direct-tab">
+                        <span>↗️ Apri video in nuova scheda</span>
+                    </a>
+                </div>
+                <button type="button" class="btn-modal-close-action" onclick="closeVideoModal()">Chiudi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HLS.js for .m3u8 streaming support -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="/static/js/app.js"></script>
 </body>
 
