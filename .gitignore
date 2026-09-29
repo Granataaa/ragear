@@ -34,3 +34,8 @@ scratch/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+transcripts_all/
+Guida_Dataset_Uninettuno.md
+output_lezioni_pulito.csv
+
