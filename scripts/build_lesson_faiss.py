@@ -246,12 +246,15 @@ def compute_embeddings(
     batch_size: int,
     device: str,
     cache_dir: Path,
+    use_fp16: bool = True,
     include_header: bool = True
 ) -> np.ndarray:
     """
     Calcola gli embeddings con BGE-M3 (o altro modello HuggingFace/SentenceTransformers),
     usando batch checkpointing progressivo per garantire resume istantaneo in caso di interruzione.
+    Supporta mezza precisione (FP16) su Apple Silicon MPS e CUDA per dimezzare la RAM e massimizzare il throughput.
     """
+    import torch
     from sentence_transformers import SentenceTransformer
     from tqdm import tqdm
 
@@ -259,7 +262,45 @@ def compute_embeddings(
     num_samples = len(lessons)
     num_batches = (num_samples + batch_size - 1) // batch_size
 
-    print(f"\n[Embedding] Modello: '{model_name}' | Max Sequence Length: {max_length}")
+    manifest_file = cache_dir / "cache_manifest.json"
+    current_config = {
+        "num_samples": num_samples,
+        "batch_size": batch_size,
+        "model_name": model_name,
+        "max_length": max_length,
+        "use_fp16": use_fp16 and device in ("mps", "cuda")
+    }
+
+    # Verifica compatibilità della cache esistente con i parametri correnti
+    if manifest_file.exists():
+        try:
+            with open(manifest_file, "r", encoding="utf-8") as mf:
+                old_config = json.load(mf)
+            if old_config != current_config:
+                print(f"[Checkpoint] Parametri cambiati rispetto ai checkpoint precedenti (vecchi: {old_config}, attuali: {current_config}).")
+                print("[Checkpoint] Reset della cache parziale per evitare disallineamenti di vettori.")
+                for old_npy in cache_dir.glob("batch_*.npy"):
+                    old_npy.unlink(missing_ok=True)
+        except Exception as e:
+            print(f"[Warning] Impossibile verificare cache_manifest: {e}")
+    else:
+        # Se esistono file .npy ma non manifest, controlla se la prima forma combacia con batch_size
+        existing_batches = list(cache_dir.glob("batch_*.npy"))
+        if existing_batches:
+            try:
+                first_b = np.load(existing_batches[0])
+                if first_b.shape[0] != batch_size and len(existing_batches) > 1:
+                    print(f"[Checkpoint] Batch size mutato ({first_b.shape[0]} -> {batch_size}). Reset della cache parziale...")
+                    for old_npy in existing_batches:
+                        old_npy.unlink(missing_ok=True)
+            except Exception:
+                pass
+
+    with open(manifest_file, "w", encoding="utf-8") as mf:
+        json.dump(current_config, mf, indent=2)
+
+    is_fp16_active = use_fp16 and device in ("mps", "cuda")
+    print(f"\n[Embedding] Modello: '{model_name}' | Max Context: {max_length} token | FP16: {is_fp16_active}")
     print(f"[Embedding] Device: {device} | Batch Size: {batch_size} | Totale campioni: {num_samples} ({num_batches} batch)")
     print(f"[Embedding] Cache checkpoint: {cache_dir.resolve()}")
 
@@ -300,9 +341,13 @@ def compute_embeddings(
     missing_batches = [b for b in range(num_batches) if b not in completed_batches]
     
     if missing_batches:
-        print(f"[Embedding] Caricamento modello '{model_name}' su device '{device}'...")
+        print(f"[Embedding] Caricamento modello '{model_name}' su device '{device}' (precisione: {'float16' if is_fp16_active else 'float32'})...")
         start_load = time.time()
-        model = SentenceTransformer(model_name, device=device)
+        model_kwargs = {}
+        if is_fp16_active:
+            model_kwargs["torch_dtype"] = torch.float16
+
+        model = SentenceTransformer(model_name, device=device, model_kwargs=model_kwargs)
         model.max_seq_length = max_length
         print(f"[Embedding] Modello caricato in {time.time() - start_load:.1f}s.")
 
@@ -435,6 +480,8 @@ def main():
     parser.add_argument("--max-length", type=int, default=8192, help="Context window massima per token (default: 8192)")
     parser.add_argument("--batch-size", type=int, default=0, help="Batch size (0 = auto-detect in base all'hardware)")
     parser.add_argument("--device", type=str, default="auto", choices=["auto", "mps", "cuda", "cpu"], help="Device hardware")
+    parser.add_argument("--fp16", dest="fp16", action="store_true", default=True, help="Usa mezza precisione FP16 su MPS/CUDA (default: True)")
+    parser.add_argument("--no-fp16", dest="fp16", action="store_false", help="Disabilita FP16 e forza calcolo in FP32")
     parser.add_argument("--no-header", action="store_true", help="Non includere il blocco intestazione (titolo, corso, SSD) nella trascrizione")
     parser.add_argument("--clean-cache", action="store_true", help="Elimina i checkpoint intermedi precedenti e ricalcola da zero")
     parser.add_argument("--limit", type=int, default=0, help="Limita il numero di lezioni per un dry-run di test (0 = tutte)")
@@ -465,6 +512,7 @@ def main():
         batch_size=batch_size,
         device=device,
         cache_dir=cache_dir,
+        use_fp16=args.fp16,
         include_header=not args.no_header
     )
 

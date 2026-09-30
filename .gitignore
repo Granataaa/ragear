@@ -39,3 +39,8 @@ transcripts_all/
 Guida_Dataset_Uninettuno.md
 output_lezioni_pulito.csv
 
+# Embeddings & checkpoint cache
+*.npy
+embeddings_cache/
+data/embeddings_cache/
+
