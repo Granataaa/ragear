@@ -75,7 +75,7 @@ def extract_topic_links(row: Dict[str, str]) -> List[Dict[str, str]]:
     return topics
 
 
-def load_and_group_dataset(csv_path: Path, transcripts_dir: Path) -> List[Dict[str, Any]]:
+def load_and_group_dataset(csv_path: Path, transcripts_dir: Path, limit: int = 0) -> List[Dict[str, Any]]:
     """
     Legge output_lezioni_pulito.csv, fa match 1:1 con i file .txt in transcripts_all,
     raggruppa le righe duplicate (lezioni condivise tra più CdL) e colleziona tutti i metadati.
@@ -129,10 +129,18 @@ def load_and_group_dataset(csv_path: Path, transcripts_dir: Path) -> List[Dict[s
 
     print(f"[Dataset] Mappate con successo {len(lessons_map)} lezioni uniche da '{csv_path.name}'.")
 
+    # Ordina le chiavi deterministicamente
+    sorted_uids = sorted(lessons_map.keys())
+    if limit > 0:
+        print(f"[Dry-run] Limitazione a {limit} lezioni prima del caricamento delle trascrizioni.")
+        sorted_uids = sorted_uids[:limit]
+
     # Costruisci record completi
+    from tqdm import tqdm
     structured_lessons: List[Dict[str, Any]] = []
     
-    for uid, data in lessons_map.items():
+    for uid in tqdm(sorted_uids, desc="[Dataset] Lettura trascrizioni", unit="lez"):
+        data = lessons_map[uid]
         rows = data["rows"]
         # Riferimento primario (prima riga)
         primary = rows[0]
@@ -443,11 +451,7 @@ def main():
         shutil.rmtree(cache_dir)
 
     # 1. Carica e raggruppa il dataset
-    lessons = load_and_group_dataset(csv_path, transcripts_dir)
-
-    if args.limit > 0:
-        print(f"[Dry-run] Limitazione a {args.limit} lezioni.")
-        lessons = lessons[:args.limit]
+    lessons = load_and_group_dataset(csv_path, transcripts_dir, limit=args.limit)
 
     # 2. Configura Device e Batch size
     device = get_device(args.device)
