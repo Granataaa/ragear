@@ -402,7 +402,8 @@ Genera le 5 query richieste rispettando rigorosamente le 5 tipologie e il format
 def print_and_save_report(
     model_stats: List[Dict[str, Any]],
     all_records: Dict[str, List[Dict[str, Any]]],
-    output_dir: Path
+    output_dir: Path,
+    suffix: str = ""
 ):
     """Generates an aesthetic terminal report and writes a detailed markdown report."""
     report_lines = []
@@ -476,9 +477,17 @@ def print_and_save_report(
                         report_lines.append(f"  *Keywords: {', '.join(q['key_topics'])}*")
 
     # Salva report Markdown
-    report_path = output_dir / "query_generation_report.md"
+    report_filename = f"query_generation_report_{suffix}.md" if suffix else "query_generation_report.md"
+    report_path = output_dir / report_filename
     with open(report_path, "w", encoding="utf-8") as f:
         f.write("\n".join(report_lines))
+
+    # Salva anche copia con i nomi dei modelli per non sovrascrivere mai
+    models_tag = "_".join([re.sub(r"[:/]", "_", m) for m in models])
+    if models_tag and report_filename == "query_generation_report.md":
+        tag_report_path = output_dir / f"query_generation_report_{models_tag}.md"
+        with open(tag_report_path, "w", encoding="utf-8") as f:
+            f.write("\n".join(report_lines))
 
     print("\n" + "=" * 90)
     print(f" Report salvato in: {report_path.resolve()}")
@@ -598,10 +607,18 @@ def main():
                     comp_entry["models_comparison"][m] = []
             comparison_records.append(comp_entry)
 
+        models_tag = "_".join([re.sub(r"[:/]", "_", m) for m in args.models])
         comp_file = output_dir / "synthetic_queries_comparison.json"
         with open(comp_file, "w", encoding="utf-8") as f:
             json.dump(comparison_records, f, indent=2, ensure_ascii=False)
+
+        # Salva anche file tagged con i modelli per archivio permanente
+        tagged_comp_file = output_dir / f"synthetic_queries_comparison_{models_tag}.json"
+        with open(tagged_comp_file, "w", encoding="utf-8") as f:
+            json.dump(comparison_records, f, indent=2, ensure_ascii=False)
+
         print(f"\n[Confronto] Salvato file di confronto affiancato in: {comp_file}")
+        print(f"[Confronto] Salvato file archivio permanente in: {tagged_comp_file}")
 
     # 4. Stampa e salva report
     print_and_save_report(all_model_stats, all_model_records, output_dir)

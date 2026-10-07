@@ -1,0 +1,474 @@
+[
+  {
+    "pair_id": "pair_1",
+    "course_a": {
+      "titoloCorso": "Lingua Inglese (edizione 2020)",
+      "titoloLezione": "Il futuro",
+      "lesson_uid": "159913db-2627-42d6-af67-98b04cdb7d91_Lesson5",
+      "settore": "L-LIN/12",
+      "facolta": [
+        "Giurisprudenza"
+      ],
+      "cfu": 4,
+      "transcript_path": "transcripts_all/159913db-2627-42d6-af67-98b04cdb7d91_Lesson5.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Fisica tecnica e impianti energetici",
+      "titoloLezione": "Elementi di illuminotecnica III",
+      "lesson_uid": "630a9add-518f-492f-9390-b26b3e45247e_Lez035",
+      "settore": "ING-IND/10",
+      "facolta": [
+        "Facoltà di Ingegneria on line"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/630a9add-518f-492f-9390-b26b3e45247e_Lez035.txt"
+    },
+    "model": "qwen2.5:7b",
+    "generated_at": "2026-10-07T12:53:22.060842",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sto cercando un percorso di studio che mi aiuti a capire come la grammatica e le forme future in inglese possano influenzare la comunicazione tecnica internazionale, specialmente nella descrizione delle prestazioni di impianti energetici.",
+        "key_topics_course_a": [
+          "futures",
+          "adverbs of frequency"
+        ],
+        "key_topics_course_b": [
+          "sensibilità dell'occhio umano",
+          "curva di sensibilità"
+        ],
+        "conceptual_bridge": "L'apprendimento delle forme future e delle frequenze nell'inglese serve a esprimere decisioni precise, come in progetti tecnici per impianti energetici, dove la descrizione precisa del futuro impatto o dell'intensità luminosa è cruciale."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Vorrei acquisire competenze su come usare il futuro in inglese per descrivere i processi di progettazione e installazione degli impianti energetici, ad esempio la futura implementazione di sistemi di illuminazione.",
+        "key_topics_course_a": [
+          "planned future",
+          "simple future"
+        ],
+        "key_topics_course_b": [
+          "radiazioni luminose",
+          "intensità lumine"
+        ],
+        "conceptual_bridge": "La grammatica delle forme future in inglese è fondamentale per descrivere processi tecnici futuri, come l'implementazione di sistemi di illuminazione, che richiedono una precisa descrizione della loro intensità e qualità."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Sto lavorando su un progetto per la progettazione di un impianto energetico sostenibile, dove necessito di esprimere con precisione le future prestazioni in termini di efficienza luminosa e uso delle radiazioni solari.",
+        "key_topics_course_a": [
+          "future continuous",
+          "future perfect"
+        ],
+        "key_topics_course_b": [
+          "luminosità",
+          "visibilità relativa"
+        ],
+        "conceptual_bridge": "La progettazione di impianti energetici richiede una conoscenza approfondita delle future prestazioni, come la luminosità e l'uso delle radiazioni solari, espressa attraverso le forme future dell'inglese."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Ho bisogno di risolvere un problema tecnico in cui devo descrivere il processo di progettazione di un impianto energetico, usando l'inglese per esprimere la futura implementazione e le previsioni sulle prestazioni dell'illuminazione.",
+        "key_topics_course_a": [
+          "planned future",
+          "absolute future"
+        ],
+        "key_topics_course_b": [
+          "curva di sensibilità",
+          "sensabilità all'intensità luminosa"
+        ],
+        "conceptual_bridge": "La combinazione delle forme future inglese e della curva di sensibilità umana aiuta a risolvere problemi tecnici come la progettazione di impianti energetici, dove è necessario prevedere le prestazioni futuri in termini di illuminazione."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Come posso strutturare il mio percorso di studi per combinare la lingua inglese e la fisica tecnica nell'ambito della progettazione di impianti energetici internazionalmente, in modo da acquisire competenze sia linguistiche che tecniche?",
+        "key_topics_course_a": [
+          "futures",
+          "adverbs of frequency"
+        ],
+        "key_topics_course_b": [
+          "sensibilità dell'occhio umano",
+          "curva di sensibilità"
+        ],
+        "conceptual_bridge": "L'apprendimento delle forme future in inglese e la comprensione della sensibilità dell'occhio umano possono fornire una base solida per la progettazione internazionale di impianti energetici, migliorando sia le comunicazioni tecniche che l'efficacia dei progetti."
+      }
+    ]
+  },
+  {
+    "pair_id": "pair_2",
+    "course_a": {
+      "titoloCorso": "Tecnologie e sostegno alla persona",
+      "titoloLezione": "Il bilinguismo bimodale",
+      "lesson_uid": "1ed27613-1c95-4f4a-835b-f5fb4e0fa543_Rinaldi_Lez002",
+      "settore": "M-PSI/08",
+      "facolta": [
+        "Psicologia"
+      ],
+      "cfu": 10,
+      "transcript_path": "transcripts_all/1ed27613-1c95-4f4a-835b-f5fb4e0fa543_Rinaldi_Lez002.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Digital and Social Media Management",
+      "titoloLezione": "STORYTELLING: NARRAZIONI E CONTENUTI CROSSMEDIALI",
+      "lesson_uid": "eb8b25ed-dd89-4be5-9084-85141cf41545_Lez009",
+      "settore": "SPS/08",
+      "facolta": [
+        "Scienze della Comunicazione"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/eb8b25ed-dd89-4be5-9084-85141cf41545_Lez009.txt"
+    },
+    "model": "qwen2.5:7b",
+    "generated_at": "2026-10-07T12:54:26.563610",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sto cercando un percorso che mi permetta di comprendere meglio la comunicazione non verbale e le sue implicazioni in ambiti digitali, specialmente per i bambini sordi. Vorrei acquisire competenze sul bilinguismo bimodale e come esso possa essere applicato nel contesto dell'educazione digitale.",
+        "key_topics_course_a": [
+          "bilinguismo bimodale",
+          "acquisizione linguistica"
+        ],
+        "key_topics_course_b": [
+          "comunicazione non verbale",
+          "brand storytelling"
+        ],
+        "conceptual_bridge": "Il bilinguismo bimodale può essere applicato al contesto dell'educazione digitale, dove la comunicazione non verbale e il branding sono fondamentali per costruire relazioni emotive tra i consumatori e le marchie."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Mi interessano strumenti tecnologici che supportano l'apprendimento bimodale dei bambini sordi. Vorrei esplorare come la narrativa cross-mediale possa essere utilizzata in questo contesto per costruire un universo di brand che rifletta le loro specifiche necessità comunicative.",
+        "key_topics_course_a": [
+          "lingua dei segni",
+          "canali comunicativi"
+        ],
+        "key_topics_course_b": [
+          "storytelling transmediale",
+          "creazione di contenuti cross-mediali"
+        ],
+        "conceptual_bridge": "La narrativa cross-mediale può essere utilizzata per sviluppare strumenti tecnologici che supportano l'apprendimento bimodale dei bambini sordi, creando un universo di brand che rifletta le loro specifiche necessità comunicative."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Vorrei acquisire competenze sul bilinguismo bimodale e come esso possa essere applicato in strategie di marketing digitale per raggiungere pubbliche specifiche, come i bambini sordi. Mi interessa capire come la narrativa cross-mediale possa essere utilizzata per costruire un brand che risponda alle esigenze comunicative dei bambini sordi.",
+        "key_topics_course_a": [
+          "bilinguismo bimodale",
+          "acquisizione linguistica"
+        ],
+        "key_topics_course_b": [
+          "brand storytelling",
+          "narrativa cross-mediale"
+        ],
+        "conceptual_bridge": "La narrativa cross-mediale può essere applicata per costruire un brand che risponda alle esigenze comunicative dei bambini sordi, utilizzando principi di bilinguismo bimodale nell'approccio digitale."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Ho bisogno di una soluzione che combini competenze sul bilinguismo bimodale e sulla narrativa cross-mediale per sviluppare un progetto che aiuti i bambini sordi a integrarsi nell'ambiente scolastico digitale. Vado ad affrontare il problema di come costruire una storia che sia capace di comunicare efficacemente con questo pubblico specifico.",
+        "key_topics_course_a": [
+          "bilinguismo bimodale",
+          "acquisizione linguistica"
+        ],
+        "key_topics_course_b": [
+          "brand storytelling",
+          "narrativa cross-mediale"
+        ],
+        "conceptual_bridge": "Il problema di costruire una storia efficace per i bambini sordi richiede la combinazione delle competenze sul bilinguismo bimodale e sulla narrativa cross-mediale, che possono essere utilizzate per sviluppare un progetto interdisciplinare."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sono indeciso tra seguire il corso di Tecnologie e Sostegno alla Persona o quello di Digital and Social Media Management. Vorrei combinare le competenze sul bilinguismo bimodale con quelle sulla narrativa cross-mediale per un percorso interdisciplinare che mi permetta di lavorare con i bambini sordi in ambito digitale.",
+        "key_topics_course_a": [
+          "bilinguismo bimodale",
+          "acquisizione linguistica"
+        ],
+        "key_topics_course_b": [
+          "brand storytelling",
+          "narrativa cross-mediale"
+        ],
+        "conceptual_bridge": "L'orientamento verso competenze interdisciplinari sul bilinguismo bimodale e sulla narrativa cross-mediale permette di creare un percorso formativo che risponde ai bisogni specifici dei bambini sordi in ambito digitale."
+      }
+    ]
+  },
+  {
+    "pair_id": "pair_3",
+    "course_a": {
+      "titoloCorso": "Comunicazione delle aziende turistiche",
+      "titoloLezione": "Internet e turismo",
+      "lesson_uid": "c6bd78de-a384-47ee-a71e-5ababf12f965_Lez006",
+      "settore": "SECS-P/08",
+      "facolta": [
+        "Economia"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/c6bd78de-a384-47ee-a71e-5ababf12f965_Lez006.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Interventi clinici per l’infanzia e per l’adolescenza",
+      "titoloLezione": "I disturbi dello spettro autistico",
+      "lesson_uid": "194ae754-8b9f-4cba-b110-3ca422b74fe2_Lez004",
+      "settore": "M-PSI/07",
+      "facolta": [
+        "Psicologia"
+      ],
+      "cfu": 8,
+      "transcript_path": "transcripts_all/194ae754-8b9f-4cba-b110-3ca422b74fe2_Lez004.txt"
+    },
+    "model": "qwen2.5:7b",
+    "generated_at": "2026-10-07T12:55:29.709640",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sto cercando un percorso che mi permetta di comprendere come la comunicazione digitale e le dinamiche online influenzano i comportamenti dei turisti con disturbi dello spettro autistico, in particolare nei loro viaggi. Vorrei capire come l'uso delle reti sociali e del电子商务正在逐步改变人们的旅行方式，尤其是对于自闭症谱系障碍（ASD）患者。我想了解如何利用社交媒体和在线平台来更好地理解和满足这些患者的旅游需求。",
+        "key_topics_course_a": [
+          "comunicazione digitale",
+          "viaggi online"
+        ],
+        "key_topics_course_b": [
+          "disturbi dello spettro autistico",
+          "uso delle reti sociali"
+        ],
+        "conceptual_bridge": "L'interazione sociale digitale è chiave per comprendere sia i comportamenti dei turisti digitali, come gli utenti di e-commerce, che quelli degli individui con disturbi dello spettro autistico."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Mi interessa conoscere quali strumenti tecnologici e modelli sono utilizzati per analizzare il comportamento di acquisto online dei turisti, come i log di navigazione nei siti web, e come questi strumenti possono essere applicati nel contesto della diagnosi e del trattamento delle persone con disturbi dello spettro autistico.",
+        "key_topics_course_a": [
+          "analisi dei dati",
+          "log di navigazione"
+        ],
+        "key_topics_course_b": [
+          "modelli statistici",
+          "diagnosi del disturbo autistico"
+        ],
+        "conceptual_bridge": "La raccolta e l'analisi di dati online, come i log di navigazione, sono fondamentali sia per il commercio digitale che per la comprensione dei comportamenti sociali degli individui con ASD."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Vorrei acquisire competenze sulla progettazione di siti web inclusivi per i turisti con disturbi dello spettro autistico, considerando le preferenze e le necessità specifiche dei viaggiatori digitali. Come posso integrare le conoscenze sulle dinamiche del turismo online con quelle sui modelli diagnostici degli individui ASD?",
+        "key_topics_course_a": [
+          "design web",
+          "preferenze dei consumatori"
+        ],
+        "key_topics_course_b": [
+          "modelli di trattamento",
+          "strategie di inclusione"
+        ],
+        "conceptual_bridge": "La progettazione di siti web inclusivi richiede una comprensione delle dinamiche del turismo online e delle specifiche esigenze degli individui con disturbi dello spettro autistico."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Come posso sviluppare un'approccio integrato per analizzare i comportamenti dei turisti digitali, come i log di navigazione e le recensioni online, e applicarlo alla diagnosi e al supporto degli individui con disturbi dello spettro autistico? Quali strumenti tecnologici e modelli possono essere utilizzati per risolvere questo problema?",
+        "key_topics_course_a": [
+          "analisi dei dati",
+          "log di navigazione"
+        ],
+        "key_topics_course_b": [
+          "modelli statistici",
+          "diagnosi del disturbo autistico"
+        ],
+        "conceptual_bridge": "L'integrazione di tecniche di analisi dati con modelli diagnostici può offrire nuove soluzioni per comprendere e supportare i comportamenti dei turisti digitali, inclusi quelli degli individui con ASD."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sono indeciso tra seguire il corso di Comunicazione delle aziende turistiche o quello di Interventi clinici per l'infanzia e l'adolescenza. Vorrei capire come combinare queste due conoscenze per creare un percorso formativo che mi permetta di lavorare con turisti digitali, specialmente quelli con disturbi dello spettro autistico.",
+        "key_topics_course_a": [
+          "comunicazione digitale",
+          "viaggi online"
+        ],
+        "key_topics_course_b": [
+          "disturbi dello spettro autistico",
+          "uso delle reti sociali"
+        ],
+        "conceptual_bridge": "La combinazione di competenze nel turismo online e nei disturbi dello spettro autistico può offrire un approccio multidisciplinare per supportare i viaggiatori digitali, inclusi quelli con ASD."
+      }
+    ]
+  },
+  {
+    "pair_id": "pair_4",
+    "course_a": {
+      "titoloCorso": "Diritto dei media digitali e delle istituzioni",
+      "titoloLezione": "SERVIZIO UNIVERSALE E CITTADINANZA DIGITALE",
+      "lesson_uid": "11dc2fe2-ad3e-403f-b039-26897cb9f3f7_Lez007",
+      "settore": "Diritto dei media digitali e delle istituzioni",
+      "facolta": [
+        "Psicologia",
+        "Scienze della Comunicazione"
+      ],
+      "cfu": 8,
+      "transcript_path": "transcripts_all/11dc2fe2-ad3e-403f-b039-26897cb9f3f7_Lez007.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Comunicazione d’impresa nel mondo digitale",
+      "titoloLezione": "Influencer marketing",
+      "lesson_uid": "0a33ed82-c637-40a3-9264-5107134bdbf5_Lez013",
+      "settore": "SPS/08",
+      "facolta": [
+        "Scienze della Comunicazione"
+      ],
+      "cfu": 8,
+      "transcript_path": "transcripts_all/0a33ed82-c637-40a3-9264-5107134bdbf5_Lez013.txt"
+    },
+    "model": "qwen2.5:7b",
+    "generated_at": "2026-10-07T12:56:26.480893",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sto cercando un percorso che mi permetta di comprendere come la nozione di servizio universale possa essere applicata al settore dell'influencer marketing. Mi appassiona l'intersezione tra il diritto dei media digitali e le strategie comunicative sostenute dagli influencer.",
+        "key_topics_course_a": [
+          "servizio universale",
+          "cittadinanza digitale"
+        ],
+        "key_topics_course_b": [
+          "influencer marketing",
+          "community"
+        ],
+        "conceptual_bridge": "La comprensione del servizio universale e della cittadinanza digitale aiuta a valutare la responsabilità etica degli influencer nel fornire contenuti accessibili a tutti."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Vorrei acquisire competenze sulla nozione di servizio universale e come applicarle al marketing digitale, in particolare aiutandomi a capire le dinamiche tra l'obbligo di servizi a tutti e la gestione delle strategie comunicative sostenute dagli influencer.",
+        "key_topics_course_a": [
+          "servizio universale",
+          "cittadinanza digitale"
+        ],
+        "key_topics_course_b": [
+          "influencer marketing",
+          "community management"
+        ],
+        "conceptual_bridge": "L'applicazione del servizio universale aiuta a definire regole che disciplinano l'influenza degli influencer sulla comunicazione d'impresa."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Vorrei apprendere come strutturare un piano di marketing digitale che integri le competenze sull'obbligo di servizio universale con quelle necessarie per gestire una community di influencer. Mi interessa capire applicazioni concrete in cui queste due competenze convergono.",
+        "key_topics_course_a": [
+          "servizio universale",
+          "cittadinanza digitale"
+        ],
+        "key_topics_course_b": [
+          "influencer marketing",
+          "community management"
+        ],
+        "conceptual_bridge": "L'integrazione delle competenze di servizio universale con quelle necessarie per la gestione di community e influencer può rafforzare l'accessibilità e l'efficacia del messaggio comunicativo."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Sto cercando un corso che mi aiuti a risolvere il problema di come garantire servizi digitali accessibili a tutti (servizio universale) con la strategia influencer marketing. Mi interessa capire come integrare queste due competenze per creare un'esperienza digitale inclusiva.",
+        "key_topics_course_a": [
+          "servizio universale",
+          "cittadinanza digitale"
+        ],
+        "key_topics_course_b": [
+          "influencer marketing",
+          "community management"
+        ],
+        "conceptual_bridge": "La combinazione delle competenze di servizio universale e influencer marketing può portare a soluzioni innovatorie che garantiscono l'accessibilità dei servizi digitali attraverso il network degli influencer."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sono indeciso tra i corsi di diritto dei media digitali e delle istituzioni e di comunicazione d’impresa nel mondo digitale. Vorrei capire come strutturare il mio percorso accademico affinché possa acquisire competenze su servizio universale e influencer marketing, per applicarle in un futuro professionale.",
+        "key_topics_course_a": [
+          "servizio universale",
+          "cittadinanza digitale"
+        ],
+        "key_topics_course_b": [
+          "influencer marketing",
+          "community management"
+        ],
+        "conceptual_bridge": "Combina le competenze di servizio universale e influencer marketing per creare un profilo professionale che si occupi della regolazione dei servizi digitali accessibili a tutti, attraverso strategie comunicative innovative."
+      }
+    ]
+  },
+  {
+    "pair_id": "pair_5",
+    "course_a": {
+      "titoloCorso": "Diritto del Lavoro",
+      "titoloLezione": "Autonomia collettiva: rappresentanza e rappresentatività",
+      "lesson_uid": "3bdf4509-3e29-412c-9623-3dd0ccd3c8fb_Lez006",
+      "settore": "Diritto del Lavoro",
+      "facolta": [
+        "Economia"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/3bdf4509-3e29-412c-9623-3dd0ccd3c8fb_Lez006.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Psicologia sociale delle relazioni in rete",
+      "titoloLezione": "L’analisi delle relazioni sociali: alcuni casi studio",
+      "lesson_uid": "740ed81c-08ef-430b-aed1-2ba854327a14_Lez026",
+      "settore": "M-PSI/05",
+      "facolta": [
+        "Psicologia"
+      ],
+      "cfu": 12,
+      "transcript_path": "transcripts_all/740ed81c-08ef-430b-aed1-2ba854327a14_Lez026.txt"
+    },
+    "model": "qwen2.5:7b",
+    "generated_at": "2026-10-07T12:57:28.044790",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sto cercando un percorso che mi permetta di comprendere meglio l'interazione tra rappresentanza sindacale e analisi delle relazioni sociali in rete. Come posso capire come la rappresentazione dei sindacati influisca sulle dinamiche di circolazione delle informazioni sui social media?",
+        "key_topics_course_a": [
+          "rappresentanza sindacale",
+          "rappresentatività"
+        ],
+        "key_topics_course_b": [
+          "analisi dei contenuti virali",
+          "influenza sociale",
+          "reputation analysis"
+        ],
+        "conceptual_bridge": "La rappresentazione sindacale e la sua misurazione attraverso la rappresentatività sono concetti chiave per comprendere come le organizzazioni sindacali si affermino, simili alle dinamiche di influenza sociale sui social media."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Mi interessano gli strumenti utilizzati nel diritto del lavoro per la misurazione della rappresentatività e come questi si applichino nell'analisi dei contenuti virali nei social network. Quali sono i modelli formali utilizzati in entrambi i campi?",
+        "key_topics_course_a": [
+          "misurazione della rappresentatività"
+        ],
+        "key_topics_course_b": [
+          "modelli di diffusione a cascata",
+          "analisi dei contenuti virali"
+        ],
+        "conceptual_bridge": "Le misure formali per la rappresentatività in diritto del lavoro e i modelli di diffusione a cascata nei social media utilizzano tecniche analoghe per misurare l'efficacia delle organizzazioni."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Vorrei acquisire competenze su come la rappresentanza sindacale e l'analisi dei contenuti virali possano essere utilizzate per promuovere un brand o una causa sociale. Come posso combinare concetti teorici del diritto del lavoro con tecniche di analisi delle relazioni sociali in rete?",
+        "key_topics_course_a": [
+          "rappresentazione sindacale",
+          "contrattazione collettiva"
+        ],
+        "key_topics_course_b": [
+          "influenza sociale",
+          "reputation analysis"
+        ],
+        "conceptual_bridge": "La rappresentanza dei sindacati e la loro influenza possono essere applicate al promuovere un brand o una causa sociale tramite l'analisi delle relazioni sociali in rete."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Ho bisogno di risolvere un problema complesso: come posso utilizzare le competenze acquisite dal diritto del lavoro per comprendere e analizzare la diffusione dei contenuti virali in rete, considerando l'aspetto rappresentativo? Potresti aiutarmi a trovare una soluzione che integri concetti teorici e metodologici dei due corsi?",
+        "key_topics_course_a": [
+          "rappresentanza sindacale",
+          "rappresentatività"
+        ],
+        "key_topics_course_b": [
+          "analisi dei contenuti virali",
+          "influenza sociale"
+        ],
+        "conceptual_bridge": "Il problema richiede di combinare le competenze del diritto del lavoro, specialmente quelle relative alla rappresentanza e alla rappresentatività, con tecniche di analisi delle relazioni sociali in rete per comprendere la diffusione dei contenuti virali."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sono indeciso su quale percorso accademico seguire: diritto del lavoro o psicologia sociale applicata ai social media. Vorrei capire come posso combinare questi due ambiti per strutturare il mio piano di studi e future carriere. Come posso integrare concetti teorici e tecniche pratiche dei due corsi?",
+        "key_topics_course_a": [
+          "rappresentanza sindacale",
+          "contrattazione collettiva"
+        ],
+        "key_topics_course_b": [
+          "analisi dei contenuti virali",
+          "influenza sociale",
+          "reputation analysis"
+        ],
+        "conceptual_bridge": "L'integrazione di concetti teorici del diritto del lavoro, come la rappresentanza e la contrattazione collettiva, con le tecniche di analisi delle relazioni sociali in rete può offrire una visione interdisciplinare utile per future carriere."
+      }
+    ]
+  }
+]

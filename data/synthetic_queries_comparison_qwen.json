@@ -1,0 +1,956 @@
+[
+  {
+    "lesson_uid": "3309812d-54bc-4766-bad4-0f683c977ac0_Lez004",
+    "titoloCorso": "Comunicazioni elettriche",
+    "titoloLezione": "Sorgenti di informazione di tipo analogico (II)",
+    "models_comparison": {
+      "qwen2.5:14b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Vorrei comprendere i principi fondamentali della formazione di segnali televisivi, come si rappresenta il movimento attraverso una successione rapida di immagini e quali sono le sfide tecniche legate alla persistenza dell'immagine sulla retina.",
+          "key_topics": [
+            "movimento",
+            "successione di immagini fisse"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Mi interessa approfondire la rappresentazione dei colori nei segnali televisivi, in particolare come i colori primari rosso, verde e blu vengono utilizzati per creare un'immagine completa.",
+          "key_topics": [
+            "colori fondamentali",
+            "componenti RGV"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Vorrei imparare come viene sfruttata la scansione di immagini fisse in televisione e come questo processo influisce sulla qualità della trasmissione televisiva.",
+          "key_topics": [
+            "scansione",
+            "qualità della trasmissione"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Sto cercando un corso che tratti tecniche per risolvere problemi di qualità nei segnali televisivi, come ottimizzare la frequenza minima di ripetizione delle immagini.",
+          "key_topics": [
+            "ottimizzazione della frequenza",
+            "frequenza minima"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono interessato a capire come le conoscenze acquisite riguardo ai segnali televisivi e la loro formazione possano applicarsi anche in altri ambiti tecnologici, come i sistemi di sicurezza video.",
+          "key_topics": [
+            "applicazioni interdisciplinari",
+            "sistema di sicurezza"
+          ]
+        }
+      ],
+      "qwen2.5:7b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi dia la base per capire come vengono formati i segnali televisivi. Vorrei imparare cosa sono i segnali televisivi e come si presentano in termini di immagini in movimento, soprattutto con riguardo alla successione delle immagini e ai parametri che definiscono la qualità del segnale.",
+          "key_topics": [
+            "formazione dei segnali televisivi",
+            "successione delle immagini",
+            "qualità del segnale"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Vorrei acquisire competenze su come rappresentare i colori in un segnale televisivo. Mi interessa approfondire l'utilizzo dei tre colori fondamentali (rosso, verde e blu) per descrivere qualunque colore e capire come utilizzare la scansione dell'immagine per trasformare queste distribuzioni spaziali in funzioni del tempo.",
+          "key_topics": [
+            "rappresentazione dei colori",
+            "componenti di RGV",
+            "scansione dell'immagine"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Mi interessano le applicazioni pratiche della teoria dei segnali televisivi. Vorrei capire come questi concetti vengono utilizzati nell'industria per migliorare la qualità delle trasmissioni televisive, in particolare con riferimento alla frequenza di ripetizione delle immagini e alle metodologie per ottimizzare il flusso di informazione.",
+          "key_topics": [
+            "qualità della trasmissione",
+            "frequenze di ripetizione",
+            "ottimizzazione del segnale"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Ho un problema con la qualità dei segnali televisivi che ricevo. Vorrei capire come valutare in modo oggettivo la qualità della trasmissione e quale parametro utilizzare per misurare la frequenza minima necessaria per evitare il 'sfarfallio'. Volevo sapere se ci sono metodi specifici per ottimizzare questo aspetto.",
+          "key_topics": [
+            "valutazione della qualità",
+            "frequenze di ripetizione",
+            "sfarfallio"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sto cercando un corso che mi dia una panoramica sulle comunicazioni elettriche. Mi piacerebbe avere un'idea generale su come vengono gestiti i segnali televisivi, in particolare con riguardo al movimento e ai colori, ma anche capire come queste conoscenze possono essere applicate in altri settori come l'ingegneria dei sistemi d'informazione.",
+          "key_topics": [
+            "panoramica sulle comunicazioni",
+            "movimento nel segnale televisivo",
+            "applicazioni interdisciplinari"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "lesson_uid": "0d2d7631-571f-4cc7-9d3e-1cff4a943b52_Lez023",
+    "titoloCorso": "Architettura dei calcolatori e progettazione di sistemi digitali",
+    "titoloLezione": "Repertorio Istruzioni - Instruction Set Architecture (ISA) 1/5",
+    "models_comparison": {
+      "qwen2.5:14b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi aiuti a comprendere i concetti di base dell'architettura dei calcolatori, come l'organizzazione della memoria e il suo indirizzamento. Vorrei familiarizzare con la rappresentazione dei linguaggi assemblativi e le parole in una memoria.",
+          "key_topics": [
+            "memoria",
+            "indirizzamento di memoria",
+            "linguaggio assemblativo"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Vorrei approfondire i dettagli tecnici sulle architetture RISC e CISC, comprendendo le differenze nell'implementazione delle istruzioni e la loro codifica. Vorrei imparare a utilizzare correttamente gli indirizzi di memoria nei microprocessori RISC.",
+          "key_topics": [
+            "architetture RISC",
+            "architetture CISC",
+            "indirizzamento di memoria"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Mi appassiona capire come le architetture di calcolatori influenzano il design e la progettazione dei sistemi digitali reali. Vorrei acquisire competenze su come implementare un linguaggio assemblatore in contesti aziendali.",
+          "key_topics": [
+            "progettazione di sistemi digitali",
+            "linguaggi assembler"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Vorrei capire come risolvere problemi di ottimizzazione nel codice assemblatore, specificamente nei contesti dove le istruzioni sono codificate in più parole. Mi piacerebbe affrontare scenari pratici e realistici.",
+          "key_topics": [
+            "ottimizzazione del codice",
+            "istruzioni multi-parola"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono indeciso tra seguire un percorso più teorico o pratica nell'ingegneria informatica. Vorrei capire come l'architettura dei calcolatori e la progettazione dei sistemi digitali siano interconnessi con altri settori, come il design di software o la sicurezza delle reti.",
+          "key_topics": [
+            "interdisciplinarità",
+            "design di software",
+            "sicurezza delle reti"
+          ]
+        }
+      ],
+      "qwen2.5:7b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi aiuti a capire i concetti fondamentali di Architettura dei calcolatori, specialmente come si organizza la memoria e cosa significa l'indirizzamento delle istruzioni. Vorrei acquisire competenze su come funzionano le parole di bit e come vengono codificati gli interi in binario con il sistema posizionale.",
+          "key_topics": [
+            "organizzazione della memoria",
+            "indirizzamento delle istruzioni",
+            "codifica degli interi",
+            "sistema posizionale"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Mi appassiona l'architettura dei calcolatori e vorrei approfondire i concetti tecnici di indirizzamento delle istruzioni, in particolare tra RISC e CISC. Vorrei comprendere meglio come si traducono le istruzioni macchina in linguaggi assemblativi ed esaminare esempi specifici di architetture reali.",
+          "key_topics": [
+            "indirizzamento RISC",
+            "indirizzamento CISC",
+            "linguaggi assemblativi",
+            "architetture reali"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Vorrei capire come applicare i concetti di architettura dei calcolatori al mondo del lavoro, specialmente in progettazione di sistemi digitali. Mi interessa imparare a selezionare l'architettura appropriata per un sistema industriale basato su RISC o CISC, e comprendere come si gestiscono le operazioni in memoria.",
+          "key_topics": [
+            "progettazione di sistemi industriali",
+            "selezione architetture",
+            "gestione della memoria"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Ho un problema con un sistema che si comporta male durante l'esecuzione. Vorrei capire come analizzare il problema in termini di indirizzamento delle istruzioni e codifica degli interi, per poi implementare una soluzione basata su un linguaggio assemblativo. Mi interessano i metodi di indirizzamento e la struttura della memoria.",
+          "key_topics": [
+            "analisi problemi",
+            "indirizzamento istruzioni",
+            "codifica interi",
+            "linguaggi assemblativi"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono indeciso sul corso di laurea e vorrei orientarmi in progetti che riguardano l'architettura dei calcolatori. Mi interessa comprendere i vari approcci tra RISC e CISC e come queste differenze possano influire sulla progettazione di un sistema informativo per una azienda. Vorrei capire meglio le basi teoriche ma anche le applicazioni pratiche.",
+          "key_topics": [
+            "approcci architettonici",
+            "progettazione aziendale",
+            "applicazioni pratiche"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "lesson_uid": "7fa1fa7e-7a7c-49b7-bf11-7086fda4bb98_Lez004",
+    "titoloCorso": "Marketing del turismo",
+    "titoloLezione": "La pianificazione dello sviluppo turistico",
+    "models_comparison": {
+      "qwen2.5:14b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Vorrei capire meglio i principi di base del marketing applicato al turismo per poterlo utilizzare nella pianificazione dello sviluppo locale.",
+          "key_topics": [
+            "principi di marketing",
+            "sviluppo turistico"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Mi interessa approfondire le tecniche per definire e implementare gli strumenti di marketing necessari allo sviluppo turistico.",
+          "key_topics": [
+            "strategie di marketing",
+            "strumenti di sviluppo"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Sono interessato a capire come il marketing del turismo possa avere un impatto positivo sullo sviluppo economico e sociale delle destinazioni.",
+          "key_topics": [
+            "impatto socio-economico",
+            "sviluppo territoriale"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Vorrei trovare soluzioni per gestire le sfide legate alla conservazione del patrimonio pubblico durante lo sviluppo turistico.",
+          "key_topics": [
+            "conservazione",
+            "sostenibilità"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sto cercando un corso che mi aiuti a capire come il marketing del turismo possa interagire con altre discipline per uno sviluppo integrato.",
+          "key_topics": [
+            "interrame",
+            "sviluppo multisettoriale"
+          ]
+        }
+      ],
+      "qwen2.5:7b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi aiuti a capire i fondamenti dell'orientamento di marketing per lo sviluppo turistico locale. Vorrei apprendere come si definiscono e si applicano le basi del marketing territoriale in questo contesto.",
+          "key_topics": [
+            "orientamento di marketing",
+            "marketing territoriale",
+            "basili del marketing"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Mi interessa approfondire i concetti tecnici e applicativi dell'applicazione del marketing al turismo. Vorrei imparare come identificare e soddisfare i bisogni dei clienti interni ed esterni nel contesto dello sviluppo turistico locale.",
+          "key_topics": [
+            "clienti interni ed esterni",
+            "basili del marketing",
+            "sviluppo territoriale"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Sto cercando un corso che mi dia competenze pratiche per lo sviluppo turistico locale. Vorrei imparare come utilizzare le tecniche di marketing per creare condizioni favorevoli allo sviluppo economica e sociale del territorio.",
+          "key_topics": [
+            "sviluppo economico",
+            "società",
+            "competenze"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Mi trovo in una situazione dove ho bisogno di risolvere un problema relativo allo sviluppo turistico. Vorrei imparare come utilizzare il marketing per creare un ciclo virtuoso di soddisfazione, attrattività e valore del territorio.",
+          "key_topics": [
+            "ciclo virtuoso",
+            "soddisfazione",
+            "attrattività"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sto cercando un corso che mi dia una panoramica di come lo sviluppo turistico locale può essere applicato attraverso l'approccio del marketing. Vorrei capire meglio i diversi aspetti della definizione e applicazione del marketing territoriale.",
+          "key_topics": [
+            "panoramica del marketing",
+            "definizione del marketing",
+            "applicazioni"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "lesson_uid": "708d34b4-505b-40cb-8fbe-eeadd7f75003_Lez018",
+    "titoloCorso": "Diritto commerciale",
+    "titoloLezione": "Organi del fallimento e gestione del patrimonio",
+    "models_comparison": {
+      "qwen2.5:14b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che spieghi i principi fondamentali degli organi del fallimento e come essi funzionano nel quadro della legge fallimentare italiana.",
+          "key_topics": [
+            "organi del fallimento",
+            "legge fallimentare"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Vorrei approfondire le competenze tecniche sui poteri e responsabilità dei curatori nel processo di gestione del patrimonio durante il fallimento.",
+          "key_topics": [
+            "curatore",
+            "patrimonio"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Sono interessato a comprendere come i principi del diritto fallimentare vengano applicati nella pratica aziendale, ad esempio nel caso di organizzazioni in difficoltà finanziarie.",
+          "key_topics": [
+            "pratiche aziendali",
+            "difficoltà finanziarie"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Mi trovavo a dover gestire una situazione di fallimento e ho bisogno di capire come risolvere problemi concreti riguardanti la liquidazione del patrimonio e l'amministrazione dei creditori.",
+          "key_topics": [
+            "liquidazione patrimoniale",
+            "creditori"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono un studente di diritto commerciale e vorrei trovare un corso che mi aiuti a orientare la mia carriera, forse mostrando come il diritto fallimentare si intreccia con altri settori del diritto.",
+          "key_topics": [
+            "orientamento professionale",
+            "intrecci interdisciplinari"
+          ]
+        }
+      ],
+      "qwen2.5:7b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi dia una panoramica completa degli organi del fallimento e delle loro funzioni, specialmente per capire chi sono i principali e come si distinguono tra loro.",
+          "key_topics": [
+            "organizzazione giudiziaria",
+            "funzioni degli organi",
+            "tribunale",
+            "giudice delegato"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Vorrei acquisire competenze su come funzionano i diversi atti del curatore, in particolare sulle relazioni sui motivi del dissesto, e imparare le procedure per scrivere efficacemente questi documenti.",
+          "key_topics": [
+            "atti del curatore",
+            "relazione sulle cause del dissesto",
+            "procedure scrivendo"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Mi appassiona capire come la gestione del patrimonio nel fallimento funziona praticamente. Vorrei sapere di più su come i curatori si occupano dell'amministrazione e della liquidazione del patrimonio.",
+          "key_topics": [
+            "amministrazione del patrimonio",
+            "liquidazione del patrimonio"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Ho un problema con una situazione di fallimento in cui il curatore ha preso possesso dei beni, ma non ho idea su come gestire i rapporti giuridici pendenti tra creditori e debitori. Vorrei capire meglio come si svolgono questi aspetti.",
+          "key_topics": [
+            "rapporti giuridici pendenti",
+            "gestione patrimonio"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono indeciso su quale corso seguire. Vorrei avere un quadro generale degli organi del fallimento e capire come questi ruoli interagiscono tra loro per poter orientare meglio la mia scelta di studi.",
+          "key_topics": [
+            "organizzazione procedura",
+            "interazioni tra organi"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "lesson_uid": "66dcba93-b6af-4cb1-b90c-4b5ad888343a_Lez010",
+    "titoloCorso": "Teorie e strumenti di valutazione psicosociale",
+    "titoloLezione": "Le domande",
+    "models_comparison": {
+      "qwen2.5:14b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Ho bisogno di solidificare i miei concetti di base sulle tecniche di valutazione psicosociale, in particolare come le domande influenzano la raccolta di dati.",
+          "key_topics": [
+            "linguaggio delle domande",
+            "formato della domanda"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Vorrei approfondire i dettagli sui vari tipi di domande chiuse e aperte, inclusi esempi pratici e la loro applicazione nei questionari.",
+          "key_topics": [
+            "domande a risposta multipla",
+            "domande a scelta forzata"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Mi interessa capire come le tecniche di intervista e i modelli di domanda possono essere utilizzati in contesti aziendali per la valutazione dei candidati.",
+          "key_topics": [
+            "domande nelle interviste",
+            "risposte degli intervistati"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Vorrei imparare a risolvere problemi pratici di raccolta dati in cui le domande potrebbero non essere efficaci per ottenere le informazioni desiderate.",
+          "key_topics": [
+            "assunzioni sulle domande",
+            "validità delle informazioni richieste"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono interessato a capire come i concetti di questo corso si collegano a altri campi della psicologia, come la psicologia sociale o l'organizzazione aziendale.",
+          "key_topics": [
+            "connessione con altri corsi",
+            "interdisciplinarità"
+          ]
+        }
+      ],
+      "qwen2.5:7b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi aiuti a capire i fondamenti delle domande utilizzate nelle tecniche di valutazione psicosociale. Vorrei acquisire competenze su come formulare e interpretare le risposte alle domande.",
+          "key_topics": [
+            "linguaggio delle domande",
+            "risposte degli intervistati"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Mi interessa approfondire i diversi formati di domande utilizzate nelle tecniche di valutazione psicosociale. Vorrei capire come costruire domande a risposta multipla e scelta forzata.",
+          "key_topics": [
+            "formato della domanda",
+            "risposte multiple"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Sono un assistente sociale che interagisco con i pazienti quotidianamente. Vorrei capire come applicare le tecniche di valutazione psicosociale nelle pratiche cliniche per migliorare la qualità degli interviste.",
+          "key_topics": [
+            "tecniche di valutazione",
+            "applicazioni cliniche"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Sto gestendo una campagna di sondaggio per capire le opinioni dei residenti su un nuovo servizio sociale. Vorrei imparare come formulare domande efficaci e interpretare le risposte per ottimizzare il feedback.",
+          "key_topics": [
+            "formulazione delle domande",
+            "interpretazione delle risposte"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono un nuovo studente e sto cercando di orientarmi nel mio piano di studi. Vorrei capire come le tecniche di valutazione psicosociale si collegano con altri campi accademici come la sociologia o l'antropologia.",
+          "key_topics": [
+            "connesioni interdisciplinari",
+            "valutazione psicosociale"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "lesson_uid": "3fb80b8a-db9a-47e7-ba50-40b8f658f1b8_Lez023",
+    "titoloCorso": "Psicologia sociale delle relazioni in rete",
+    "titoloLezione": "Aspetti normativi e contro normativi nei gruppi virtuali",
+    "models_comparison": {
+      "qwen2.5:14b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi aiuti a comprendere i concetti di base della deindividuazione e dell'anonimato nei gruppi virtuali.",
+          "key_topics": [
+            "deindividuazione",
+            "anonimato"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Vorrei approfondire i meccanismi cognitivi che sottostanno alla deindividuazione e come questi influenzano la percezione di appartenenza al gruppo.",
+          "key_topics": [
+            "cognizione",
+            "percezione dell'appartenenza"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Mi interessa capire come le norme di comportamento nei gruppi virtuali possano influenzare la produttività e il clima organizzativo in un ambiente lavorativo digitale.",
+          "key_topics": [
+            "norme di gruppo",
+            "produttività"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Vorrei imparare come risolvere conflitti normativi nei gruppi virtuali, soprattutto quando i membri provengono da diverse culture con differenti aspettative sulle espressioni emotive.",
+          "key_topics": [
+            "conflitti normativi",
+            "espressione delle emozioni"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono interessato a un corso che possa aiutarmi a capire come le dinamiche di gruppo virtuali si connettono con altri campi della psicologia sociale, per orientare il mio prossimo semestre di studi.",
+          "key_topics": [
+            "dinamiche di gruppo",
+            "psicologia sociale"
+          ]
+        }
+      ],
+      "qwen2.5:7b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi dia una base solida sui concetti di deindividuazione e anonimato, come questi termini influenzano il comportamento sociale nei gruppi virtuali.",
+          "key_topics": [
+            "deindividuazione",
+            "anonimato"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Mi appassiona capire meglio le norme di gruppo e come queste vengono formate nei gruppi virtuali. Vorrei acquisire competenze specifiche su questo argomento.",
+          "key_topics": [
+            "norme di gruppo",
+            "sviluppo delle norme"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Vorrei comprendere come le norme di gruppo e le dinamiche del deindividuazione potrebbero influire sulle interazioni nei team aziendali virtuali. Mi interessano applicazioni pratiche per migliorare l'efficacia lavorativa.",
+          "key_topics": [
+            "interazioni nei team",
+            "dynamica dei gruppi"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Ho un problema con le differenze di espressione emotiva nei team virtuali. Vorrei capire come formare norme condivise per gestire meglio queste sfide.",
+          "key_topics": [
+            "espressione delle emozioni",
+            "norme condivise"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sto cercando un corso che mi offra una panoramica del comportamento sociale nei gruppi virtuali. Vorrei capire meglio le dinamiche e come questo potrebbe influenzare la mia carriera in psicologia.",
+          "key_topics": [
+            "dinamiche dei gruppi",
+            "comportamento sociale"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "lesson_uid": "2f82839a-1d84-47c3-9c9d-f12c974a318f_Lez023",
+    "titoloCorso": "Gestione della qualità",
+    "titoloLezione": "Controllo di accettazione: piani di campionamento",
+    "models_comparison": {
+      "qwen2.5:14b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando di capire le basi del controllo di accettazione e come funzionano i piani di campionamento tra fornitore e committente.",
+          "key_topics": [
+            "rischi del fornitore",
+            "rischi del committente"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Vorrei approfondire la terminologia tecnica utilizzata nei piani di campionamento, come alfa e beta rischio in statistica.",
+          "key_topics": [
+            "rischio del fornitore",
+            "rischio del committente"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Mi interessa capire come i piani di campionamento sono applicati nel mondo reale per bilanciare rischi e qualità tra fornitori e clienti.",
+          "key_topics": [
+            "livello di qualità accettabile",
+            "livello di qualità tollerabile"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Vorrei risolvere un problema pratico riguardante come determinare la numerosità del campione e il numero di accettazione per ottimizzare l'accordo tra fornitore e committente.",
+          "key_topics": [
+            "numerosità del campione",
+            "numero di accettazione"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono indeciso se orientarmi verso la qualità o la produzione industriale. Vorrei una panoramica dei concetti di controllo di accettazione e come questi si applicano in diversi settori.",
+          "key_topics": [
+            "controllo di accettazione",
+            "interdisciplinarietà"
+          ]
+        }
+      ],
+      "qwen2.5:7b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi dia una panoramica dei primi principi sulle dinamiche del controllo di accettazione, compresi i ruoli del fornitore e del committente. Vorrei capire meglio le basi teoriche prima di approfondire.",
+          "key_topics": [
+            "ruoli attori",
+            "controllo di accettazione",
+            "principi fondazionali"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Mi interessa comprendere meglio i parametri statistici come alfa e beta nei piani di campionamento, in particolare come calcolare le percentuali di difettosità LQA e LQT. Vorrei acquisire competenze tecniche su questi concetti.",
+          "key_topics": [
+            "parametri statistici",
+            "piani di campionamento",
+            "percentuali difettosità"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Sono un'ingegneressa che lavora in un'azienda produttrice e sto cercando una formazione per applicare praticamente i piani di campionamento. Vorrei capire come utilizzare questi concetti per migliorare la qualità dei nostri prodotti.",
+          "key_topics": [
+            "pianificazione",
+            "qualità aziendale",
+            "applicazioni pratiche"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Ho un problema di ottimizzazione del processo di controllo di accettazione e sto cercando una soluzione. Vorrei imparare come costruire i piani di campionamento per ridurre il rischio di errori di prima e seconda specie.",
+          "key_topics": [
+            "risoluzione problemi",
+            "ottimizzazione",
+            "pianificazione controllo"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono indeciso tra varie materie per il mio piano di studi e sto cercando un corso che mi dia una panoramica. Vorrei acquisire competenze su come costruire piani di campionamento e comprendere le dinamiche del controllo di accettazione.",
+          "key_topics": [
+            "panoramica formativa",
+            "costruzione piani di campionamento",
+            "dinamiche del controllo"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "lesson_uid": "28d438e6-a291-4c2a-9a56-59db3bc06636_Telmon_Lez007",
+    "titoloCorso": "Servizi di rete e sicurezza",
+    "titoloLezione": "Sicurezza  dello stack TCP/IP",
+    "models_comparison": {
+      "qwen2.5:14b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi aiuti a capire i principi basilari della sicurezza dello stack TCP/IP, come funzionano le sue criticità e vulnerabilità.",
+          "key_topics": [
+            "criticità del modello di TCP/IP",
+            "vulnerabilità alla sicurezza"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Vorrei approfondire gli aspetti tecnici della sicurezza dell'Address Resolution Protocol (ARP) e come si possono prevenire le sue potenziali minacce.",
+          "key_topics": [
+            "protocollo ARP",
+            "attacchi basati su ARP"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Mi interessa un corso che tratta la sicurezza del traffico di rete da un'ottica aziendale, come proteggere i servizi aziendali dalle minacce e vulnerabilità del protocollo TCP/IP.",
+          "key_topics": [
+            "sicurezza applicativa",
+            "protezione dei servizi"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Mi serve un corso che mi aiuti a risolvere problemi di sicurezza legati alla mancanza di identificazione dei nodi attaccanti e all'accesso da siti poco controllati.",
+          "key_topics": [
+            "identificazione dei nodi",
+            "siti non controllati"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Vorrei trovare un corso che mi dia una panoramica delle implicazioni interdisciplinari della sicurezza TCP/IP e come essa si collega a domini come la legge digitale e i regolamenti sulla privacy.",
+          "key_topics": [
+            "legge digitale",
+            "regolamenti sulla privacy"
+          ]
+        }
+      ],
+      "qwen2.5:7b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi dia una solida base sulle fondamenta della sicurezza dello stack TCP/IP, soprattutto per capire i limiti del protocollo e come si può garantire la sicurezza a livelli più alti. Vorrei comprendere meglio i concetti chiave di questo argomento per poterli applicare in ambito professionale.",
+          "key_topics": [
+            "sicurezza dello stack TCP/IP",
+            "limiti del protocollo",
+            "protocoli applicativi"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Cercando un corso più tecnico, vorrei approfondire i dettagli sulle vulnerabilità e gli attacchi specifici dello stack TCP/IP, come il TCP blind spoofing. Vorrei acquisire conoscenze su come implementare protezioni efficaci per prevenire tali attacchi.",
+          "key_topics": [
+            "TCP blind spoofing",
+            "vulnerabilità dello stack TCP/IP",
+            "protezioni"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Mi interessa un corso che mi dia competenze pratiche per garantire la sicurezza in reti reali. Vorrei apprendere come monitorare e proteggere rete locali da attacchi ARP, imparando a usare i protocolli di sicurezza applicativa come HTTPS.",
+          "key_topics": [
+            "sicurezza rete locale",
+            "monitoraggio e protezione",
+            "protocolli di sicurezza applicativa"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Vorrei risolvere un problema pratico: come garantire la riservatezza dei dati in una rete pubblica utilizzando lo stack TCP/IP. Vorrei capire come implementare meccanismi di sicurezza a livello applicativo per proteggere i dati da attacchi e manomissioni.",
+          "key_topics": [
+            "riservatezza dei dati",
+            "garanzie di sicurezza",
+            "attacchi a livello applicativo"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono un po' confuso sul percorso di studi e non so quale direzione seguire. Vorrei capire come integrare la sicurezza dello stack TCP/IP con altri corsi del mio piano di laurea, soprattutto per il settore dell'informativa di sicurezza.",
+          "key_topics": [
+            "integrare con altri corsi",
+            "settori correlati",
+            "sicurezza informatica"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "lesson_uid": "c807f5a7-4eae-40e7-9811-087072c1a5e6_Lez007",
+    "titoloCorso": "Ingegneria delle gallerie e delle fondazioni",
+    "titoloLezione": "Procedure per la progettazione del rivestimento di prima fase. Parte I - Aspetti preliminari",
+    "models_comparison": {
+      "qwen2.5:14b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi aiuti a comprendere i concetti di base per progettare rivestimenti di gallerie e le prime linee guida da seguire in questo tipo di progetti.",
+          "key_topics": [
+            "procedura di progetto",
+            "proprietà del terreno"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Vorrei approfondire le tecniche avanzate per la valutazione della sicurezza dei rivestimenti, come il calcolo delle sezioni equivalenti e i diagrammi di interazione.",
+          "key_topics": [
+            "sezione equivalente",
+            "diagrammi di interazione"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Mi interessano molto le applicazioni pratiche dei concetti di progettazione di rivestimenti in contesti industriali e aziendali, come la scelta della geometria del rivestimento.",
+          "key_topics": [
+            "geometria del rivestimento",
+            "travi di acciaio"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Vorrei capire come risolvere problemi reali nella progettazione dei rivestimenti, ad esempimo come determinare il carico e la sollecitazione sul rivestimento di prima fase.",
+          "key_topics": [
+            "sollecitazioni",
+            "carico sul rivestimento"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono interessato a un corso che mi dia una panoramica generale sui diversi tipi di progetti di gallerie e come questi si connettono con altri settori della costruzione.",
+          "key_topics": [
+            "tipo di rivestimento",
+            "costruzioni"
+          ]
+        }
+      ],
+      "qwen2.5:7b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi dia una base solida sui concetti fondamentali di progettazione dei rivestimenti per gallerie. Vorrei capire come si esegue la valutazione iniziale e quali sono i materiali principali utilizzati.",
+          "key_topics": [
+            "progettazione rivestimenti",
+            "valutazione iniziale",
+            "materiali principali"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Mi interessa approfondire le tecniche di calcolo numerico per la determinazione delle sollecitazioni sul rivestimento. Vorrei imparare a utilizzare i diagrammi di capacità e a disegnare una sezione equivalente.",
+          "key_topics": [
+            "calcolo numerico",
+            "diagrammi di capacità",
+            "sezione equivalente"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Mi piacerebbe apprendere come applicare le teorie del corso all'ingegneria dei progetti reali. Vorrei sapere in che modo i metodi di calcolo vengono utilizzati nelle gallerie per la distribuzione delle sollecitazioni tra acciaio e calcestruzzo.",
+          "key_topics": [
+            "applicazione nei progetti",
+            "distribuzione sollecitazioni",
+            "gallerie reali"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Sto lavorando su un progetto di rivestimento per una galleria con travi di acciaio e calcestruzzo sprizzato. Vorrei imparare come valutare la sicurezza del rivestimento utilizzando i diagrammi di capacità.",
+          "key_topics": [
+            "problema progettazione",
+            "valutazione sicurezza",
+            "diagrammi di capacità"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono indeciso su quale corso seguire e sto cercando una panoramica dei contenuti. Vorrei capire come questi concetti sono rilevanti per l'ingegneria delle gallerie e quali altri corsi potrebbero complementare questo materiale.",
+          "key_topics": [
+            "panoramica contenuti",
+            "rilevanza ingegneria gallerie",
+            "corsi complementari"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "lesson_uid": "10466320-d671-4990-bdb7-d1f35768cff6_Lez019",
+    "titoloCorso": "Scienza delle finanze",
+    "titoloLezione": "L'imposta personale sul reddito (IRPEF)",
+    "models_comparison": {
+      "qwen2.5:14b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi dia una base solida sulla definizione di reddito imponibile per l'imposta personale sul reddito, in modo da capire come si calcolano le tasse sui redditi e quali sono i principali aspetti dell'IRPEF.",
+          "key_topics": [
+            "definizione di reddito",
+            "imposta progressiva"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Vorrei approfondire le diverse categorie di redditi previste dall'imposizione personale sul reddito, come il reddito da lavoro dipendente e da capitale, compresi gli aspetti tecnici della tassazione e la loro applicazione pratica.",
+          "key_topics": [
+            "categorizzazione dei redditi",
+            "tassazione specifica"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Mi appassiona capire come l'imposta personale sul reddito influenza il mercato del lavoro e le dinamiche aziendali, in particolare per quanto riguarda le strategie di remunerazione e la gestione dei rischi fiscali.",
+          "key_topics": [
+            "impatto economico",
+            "gestione fiscale"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Vorrei capire come calcolare l'imposta personale sul reddito in casi complessi, ad esempio quando ci sono più fonti di reddito e necessita un'integrazione tra diverse categorie imponibili.",
+          "key_topics": [
+            "calcolo dell'IRPEF",
+            "integrazione dei redditi"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Sono indeciso su quale direzione seguire per il mio piano di studi e vorrei un corso che mi dia una panoramica completa delle diverse imposte sul reddito, sia in termini teorici che pratici, per aiutarmi a orientare la mia carriera.",
+          "key_topics": [
+            "panoramica delle imposte",
+            "orientamento professionale"
+          ]
+        }
+      ],
+      "qwen2.5:7b": [
+        {
+          "type": "fondazionale",
+          "query_text": "Sto cercando un corso che mi aiuti a capire i principi fondamentali dell'imposta personale sul reddito in Italia, come funziona e quali sono le sue caratteristiche generali.",
+          "key_topics": [
+            "imposta personale sul reddito",
+            "caratteristiche generali",
+            "funzionamento"
+          ]
+        },
+        {
+          "type": "tecnica",
+          "query_text": "Vorrei acquisire competenze su come calcolare e comprendere la determinazione dell'imposta personale sul reddito in Italia, specialmente sui diversi tipi di redditi imponibili.",
+          "key_topics": [
+            "calcolo",
+            "determinazione",
+            "redditi imponibili"
+          ]
+        },
+        {
+          "type": "applicativa",
+          "query_text": "Mi appassiona l'applicazione pratica dell'imposta personale sul reddito in azienda. Vorrei capire come si gestisce effettivamente la tassazione dei diversi tipi di redditi e le implicazioni fiscali per i lavoratori.",
+          "key_topics": [
+            "gestione tassativa",
+            "redditi imponibili",
+            "implicazioni fiscali"
+          ]
+        },
+        {
+          "type": "problem_solving",
+          "query_text": "Ho un cliente che ha investito in una proprietà immobiliare e mi chiede se gli redditi derivanti dalla sua prima casa sono tassabili. Vorrei sapere come valutare questa situazione.",
+          "key_topics": [
+            "tassazione",
+            "redditi immobiliari",
+            "prima casa"
+          ]
+        },
+        {
+          "type": "orientamento",
+          "query_text": "Mi trovo indeciso tra diverse opzioni di corso e vorrei capire come l'imposta personale sul reddito può interagire con altri campi di studi, come la finanza aziendale o il diritto fiscale.",
+          "key_topics": [
+            "interazioni",
+            "finanza aziendale",
+            "diritto fiscale"
+          ]
+        }
+      ]
+    }
+  }
+]

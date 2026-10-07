@@ -1,0 +1,468 @@
+[
+  {
+    "pair_id": "pair_1",
+    "course_a": {
+      "titoloCorso": "Lingua Inglese (edizione 2020)",
+      "titoloLezione": "Il futuro",
+      "lesson_uid": "159913db-2627-42d6-af67-98b04cdb7d91_Lesson5",
+      "settore": "L-LIN/12",
+      "facolta": [
+        "Giurisprudenza"
+      ],
+      "cfu": 4,
+      "transcript_path": "transcripts_all/159913db-2627-42d6-af67-98b04cdb7d91_Lesson5.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Fisica tecnica e impianti energetici",
+      "titoloLezione": "Elementi di illuminotecnica III",
+      "lesson_uid": "630a9add-518f-492f-9390-b26b3e45247e_Lez035",
+      "settore": "ING-IND/10",
+      "facolta": [
+        "Facoltà di Ingegneria on line"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/630a9add-518f-492f-9390-b26b3e45247e_Lez035.txt"
+    },
+    "model": "phi4:latest",
+    "generated_at": "2026-10-07T14:56:34.244742",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sto cercando di capire come le strutture linguistiche del futuro in inglese possano aiutarmi a comprendere meglio i concetti temporali utilizzati nelle misurazioni della luce nel campo visibile.",
+        "key_topics_course_a": [
+          "futures",
+          "adverbs of frequency"
+        ],
+        "key_topics_course_b": [
+          "sensibilità dell'occhio umano",
+          "campo del visibile"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano concetti temporali, sia linguisticamente che fisicamente, attraverso l'uso di strutture per descrivere azioni future o fenomeni luminosi."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Mi appassiona come la comprensione delle diverse sensibilità dell'occhio umano possa essere paragonata alla varietà dei tempi verbali in inglese, per migliorare l'apprendimento delle strutture temporali.",
+        "key_topics_course_a": [
+          "simple future",
+          "planned future"
+        ],
+        "key_topics_course_b": [
+          "sensibilità dell'occhio umano",
+          "curva di sensibilità"
+        ],
+        "conceptual_bridge": "La varietà nei tempi verbali inglese e la sensibilità dell'occhio umano alle diverse lunghezze d'onda rappresentano due sistemi complessi che richiedono una comprensione delle variabili temporali."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Vorrei acquisire competenze per lavorare come traduttore tecnico, dove devo spiegare concetti di illuminotecnica in inglese a un pubblico non specializzato.",
+        "key_topics_course_a": [
+          "planned future",
+          "intention of future"
+        ],
+        "key_topics_course_b": [
+          "sensibilità dell'occhio umano",
+          "campo del visibile"
+        ],
+        "conceptual_bridge": "La capacità di tradurre e spiegare concetti tecnici in inglese richiede una comprensione approfondita sia delle strutture linguistiche temporali che dei principi fisici della luce."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Come posso utilizzare le mie conoscenze di sintassi inglese per migliorare la comunicazione su progetti di illuminazione sostenibile, dove è fondamentale spiegare i benefici immediati e futuri?",
+        "key_topics_course_a": [
+          "simple future",
+          "planned future"
+        ],
+        "key_topics_course_b": [
+          "sensibilità dell'occhio umano",
+          "curva di sensibilità notturna"
+        ],
+        "conceptual_bridge": "La capacità di comunicare efficacemente i benefici temporali dei progetti richiede l'integrazione della comprensione delle strutture future in inglese con la conoscenza tecnica dell'illuminazione."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sto riflettendo su come combinare studi di lingua inglese e fisica tecnica per progettare materiali educativi che rendano le nozioni scientifiche accessibili in modo chiaro e preciso.",
+        "key_topics_course_a": [
+          "futures",
+          "adverbs"
+        ],
+        "key_topics_course_b": [
+          "sensibilità dell'occhio umano",
+          "campo del visibile"
+        ],
+        "conceptual_bridge": "L'integrazione di competenze linguistiche con la fisica tecnica offre l'opportunità di creare materiali didattici che rendono i concetti scientifici facilmente comprensibili attraverso un uso attento dei tempi verbali."
+      }
+    ]
+  },
+  {
+    "pair_id": "pair_2",
+    "course_a": {
+      "titoloCorso": "Tecnologie e sostegno alla persona",
+      "titoloLezione": "Il bilinguismo bimodale",
+      "lesson_uid": "1ed27613-1c95-4f4a-835b-f5fb4e0fa543_Rinaldi_Lez002",
+      "settore": "M-PSI/08",
+      "facolta": [
+        "Psicologia"
+      ],
+      "cfu": 10,
+      "transcript_path": "transcripts_all/1ed27613-1c95-4f4a-835b-f5fb4e0fa543_Rinaldi_Lez002.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Digital and Social Media Management",
+      "titoloLezione": "STORYTELLING: NARRAZIONI E CONTENUTI CROSSMEDIALI",
+      "lesson_uid": "eb8b25ed-dd89-4be5-9084-85141cf41545_Lez009",
+      "settore": "SPS/08",
+      "facolta": [
+        "Scienze della Comunicazione"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/eb8b25ed-dd89-4be5-9084-85141cf41545_Lez009.txt"
+    },
+    "model": "phi4:latest",
+    "generated_at": "2026-10-07T14:58:29.603517",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sto cercando di capire come le differenze nei canali comunicativi influenzano l'apprendimento e l'identità dei bambini sordi, e mi chiedo se questi principi possano essere applicati a come si costruiscono le identità digitali attraverso narrazioni sui social media.",
+        "key_topics_course_a": [
+          "bilinguismo bimodale",
+          "sviluppo cognitivo"
+        ],
+        "key_topics_course_b": [
+          "storytelling",
+          "identità digitale"
+        ],
+        "conceptual_bridge": "Entrambi i corsi esplorano come diversi canali di comunicazione influenzano l'identità e la percezione, sia nel contesto del bilinguismo che nella costruzione delle identità digitali."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Vorrei approfondire i modelli narrativi utilizzati nei media digitali per capire come possono essere adattati a progetti di supporto alla comunicazione dei bambini sordi, creando contenuti che rispettino e valorizzino le loro lingue.",
+        "key_topics_course_a": [
+          "lingua dei segni",
+          "bilinguismo"
+        ],
+        "key_topics_course_b": [
+          "narratività",
+          "contenuti cross-mediali"
+        ],
+        "conceptual_bridge": "I modelli narrativi dei media digitali possono essere adattati per sviluppare contenuti che supportino il bilinguismo e promuovano la lingua dei segni."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Sto esplorando l'idea di creare un progetto interdisciplinare che utilizzi tecniche di storytelling digitale per sviluppare materiali educativi per bambini sordi, in modo da migliorare la loro integrazione sociale e accademica.",
+        "key_topics_course_a": [
+          "integrazione scolastica",
+          "bambini sordi"
+        ],
+        "key_topics_course_b": [
+          "storytelling digitale",
+          "progetti educativi"
+        ],
+        "conceptual_bridge": "La combinazione di tecniche di storytelling digitale e approcci educativi per bambini sordi può migliorare l'integrazione sociale ed accademica."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Come posso utilizzare il bilinguismo bimodale insieme alle strategie di storytelling digitale per creare una campagna che sensibilizzi sull'importanza delle lingue dei segni e promuova l'inclusione sociale?",
+        "key_topics_course_a": [
+          "bilinguismo bimodale",
+          "inclusione sociale"
+        ],
+        "key_topics_course_b": [
+          "campagne di sensibilizzazione",
+          "storytelling digitale"
+        ],
+        "conceptual_bridge": "L'uso congiunto del bilinguismo bimodale e delle strategie di storytelling può creare campagne efficaci per promuovere l'inclusione sociale."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Mi interesso al modo in cui le diverse modalità comunicative influenzano lo sviluppo personale e professionale. Vorrei capire come posso strutturare il mio percorso di studi per integrare competenze nel supporto alla persona con quelle nella gestione dei social media.",
+        "key_topics_course_a": [
+          "sviluppo psicoaffettivo",
+          "bilinguismo"
+        ],
+        "key_topics_course_b": [
+          "gestione dei social media",
+          "identità digitale"
+        ],
+        "conceptual_bridge": "Integrare competenze nel supporto alla persona e nella gestione dei social media può offrire una prospettiva unica sullo sviluppo personale e professionale."
+      }
+    ]
+  },
+  {
+    "pair_id": "pair_3",
+    "course_a": {
+      "titoloCorso": "Comunicazione delle aziende turistiche",
+      "titoloLezione": "Internet e turismo",
+      "lesson_uid": "c6bd78de-a384-47ee-a71e-5ababf12f965_Lez006",
+      "settore": "SECS-P/08",
+      "facolta": [
+        "Economia"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/c6bd78de-a384-47ee-a71e-5ababf12f965_Lez006.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Interventi clinici per l’infanzia e per l’adolescenza",
+      "titoloLezione": "I disturbi dello spettro autistico",
+      "lesson_uid": "194ae754-8b9f-4cba-b110-3ca422b74fe2_Lez004",
+      "settore": "M-PSI/07",
+      "facolta": [
+        "Psicologia"
+      ],
+      "cfu": 8,
+      "transcript_path": "transcripts_all/194ae754-8b9f-4cba-b110-3ca422b74fe2_Lez004.txt"
+    },
+    "model": "phi4:latest",
+    "generated_at": "2026-10-07T15:00:26.439924",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Mi interessa capire come la crescente digitalizzazione e l'uso di Internet influenzino le modalità comunicative tra individui, specialmente in contesti clinici dove si lavora con bambini autistici.",
+        "key_topics_course_a": [
+          "comunicazione digitale",
+          "turisti digitali"
+        ],
+        "key_topics_course_b": [
+          "disturbi dello spettro autistico",
+          "comunicazione non verbale"
+        ],
+        "conceptual_bridge": "Il cambiamento delle modalità comunicative grazie a Internet è parallelo alle sfide di comunicazione nei bambini con disturbo dello spettro autistico, entrambe richiedono strategie innovative."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Sto cercando strumenti digitali che possano facilitare l'interazione sociale e la comunicazione non verbale nei bambini con disturbi dello spettro autistico, magari tramite piattaforme già utilizzate nel settore turistico.",
+        "key_topics_course_a": [
+          "e-commerce",
+          "comunicazione digitale"
+        ],
+        "key_topics_course_b": [
+          "interazione sociale",
+          "comunicazione non verbale"
+        ],
+        "conceptual_bridge": "Le tecniche di comunicazione digitale sviluppate per il settore turistico possono essere adattate a strumenti utilizzabili nel trattamento dei disturbi dello spettro autistico."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Vorrei esplorare la possibilità di creare una piattaforma online che offra esperienze turistiche personalizzate per famiglie con bambini autistici, supportando così sia le loro esigenze viaggiatorie che quelle comunicative.",
+        "key_topics_course_a": [
+          "esperienza turistica",
+          "piattaforme online"
+        ],
+        "key_topics_course_b": [
+          "disturbi dello spettro autistico",
+          "esigenze speciali"
+        ],
+        "conceptual_bridge": "Combinare le competenze in gestione delle esperienze turistiche con la conoscenza dei bisogni specifici di bambini autistici può innovare il settore del turismo accessibile."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Come potremmo affrontare il problema dell'isolamento sociale che molti bambini con disturbi dello spettro autistico sperimentano, utilizzando piattaforme digitali già impiegate per migliorare l'esperienza dei turisti?",
+        "key_topics_course_a": [
+          "comunicazione digitale",
+          "social network"
+        ],
+        "key_topics_course_b": [
+          "isolamento sociale",
+          "disturbi dello spettro autistico"
+        ],
+        "conceptual_bridge": "Le piattaforme digitali utilizzate nel settore turistico per migliorare le relazioni sociali possono essere adattate per contrastare l'isolamento sociale nei bambini con disturbi dello spettro autistico."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sto valutando di strutturare il mio piano di studi in modo da combinare competenze nel settore turistico e nella neuropsichiatria infantile, per sviluppare soluzioni innovative che supportino l'inclusione sociale.",
+        "key_topics_course_a": [
+          "comunicazione delle imprese",
+          "turismo digitale"
+        ],
+        "key_topics_course_b": [
+          "neuropsichiatria infantile",
+          "disturbi dello spettro autistico"
+        ],
+        "conceptual_bridge": "L'intersezione tra il settore turistico e la neuropsichiatria infantile apre opportunità per creare soluzioni inclusive che migliorano l'esperienza sociale dei bambini con disturbi dello spettro autistico."
+      }
+    ]
+  },
+  {
+    "pair_id": "pair_4",
+    "course_a": {
+      "titoloCorso": "Diritto dei media digitali e delle istituzioni",
+      "titoloLezione": "SERVIZIO UNIVERSALE E CITTADINANZA DIGITALE",
+      "lesson_uid": "11dc2fe2-ad3e-403f-b039-26897cb9f3f7_Lez007",
+      "settore": "Diritto dei media digitali e delle istituzioni",
+      "facolta": [
+        "Psicologia",
+        "Scienze della Comunicazione"
+      ],
+      "cfu": 8,
+      "transcript_path": "transcripts_all/11dc2fe2-ad3e-403f-b039-26897cb9f3f7_Lez007.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Comunicazione d’impresa nel mondo digitale",
+      "titoloLezione": "Influencer marketing",
+      "lesson_uid": "0a33ed82-c637-40a3-9264-5107134bdbf5_Lez013",
+      "settore": "SPS/08",
+      "facolta": [
+        "Scienze della Comunicazione"
+      ],
+      "cfu": 8,
+      "transcript_path": "transcripts_all/0a33ed82-c637-40a3-9264-5107134bdbf5_Lez013.txt"
+    },
+    "model": "phi4:latest",
+    "generated_at": "2026-10-07T15:02:08.116121",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sto cercando di capire come i principi del servizio universale possano influenzare la credibilità e l'efficacia dell'influencer marketing nel contesto della cittadinanza digitale.",
+        "key_topics_course_a": [
+          "servizio universale",
+          "cittadinanza digitale"
+        ],
+        "key_topics_course_b": [
+          "influencer marketing",
+          "credibilità"
+        ],
+        "conceptual_bridge": "Il servizio universale garantisce l'accesso equo alle tecnologie digitali, influenzando la credibilità e le strategie dell'influencer marketing."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Mi interessa approfondire quali strumenti di regolazione sociale del servizio universale possano essere applicati per ottimizzare le campagne di influencer marketing.",
+        "key_topics_course_a": [
+          "regolazione sociale",
+          "servizio universale"
+        ],
+        "key_topics_course_b": [
+          "campagne di marketing",
+          "influencer marketing"
+        ],
+        "conceptual_bridge": "I principi di regolazione sociale del servizio universale possono offrire linee guida per una comunicazione digitale equa e trasparente."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Vorrei esplorare come le competenze acquisite nello studio della cittadinanza digitale possano essere integrate nella pratica dell'influencer marketing per migliorarne l'impatto sociale.",
+        "key_topics_course_a": [
+          "cittadinanza digitale"
+        ],
+        "key_topics_course_b": [
+          "influencer marketing",
+          "impatto sociale"
+        ],
+        "conceptual_bridge": "La cittadinanza digitale può arricchire le pratiche dell'influencer marketing con un focus maggiore sull'equità e la partecipazione inclusiva."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Come posso risolvere il problema della frammentazione comunicativa tra piattaforme digitali classiche e moderne utilizzando i principi di servizio universale?",
+        "key_topics_course_a": [
+          "servizio universale",
+          "cittadinanza digitale"
+        ],
+        "key_topics_course_b": [
+          "comunicazione digitale",
+          "influencer marketing"
+        ],
+        "conceptual_bridge": "L'integrazione del servizio universale può armonizzare le diverse piattaforme comunicative, migliorando la coerenza e l'efficacia delle strategie digitali."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sono indeciso su come strutturare il mio piano di studi per combinare gli aspetti del diritto digitale con le tecniche di comunicazione d'impresa nel mondo digitale.",
+        "key_topics_course_a": [
+          "diritto dei media digitali",
+          "servizio universale"
+        ],
+        "key_topics_course_b": [
+          "comunicazione d’impresa",
+          "influencer marketing"
+        ],
+        "conceptual_bridge": "Un approccio interdisciplinare che unisce diritto digitale e comunicazione può prepararmi a affrontare sfide legate alla regolamentazione e all'innovazione nella comunicazione moderna."
+      }
+    ]
+  },
+  {
+    "pair_id": "pair_5",
+    "course_a": {
+      "titoloCorso": "Diritto del Lavoro",
+      "titoloLezione": "Autonomia collettiva: rappresentanza e rappresentatività",
+      "lesson_uid": "3bdf4509-3e29-412c-9623-3dd0ccd3c8fb_Lez006",
+      "settore": "Diritto del Lavoro",
+      "facolta": [
+        "Economia"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/3bdf4509-3e29-412c-9623-3dd0ccd3c8fb_Lez006.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Psicologia sociale delle relazioni in rete",
+      "titoloLezione": "L’analisi delle relazioni sociali: alcuni casi studio",
+      "lesson_uid": "740ed81c-08ef-430b-aed1-2ba854327a14_Lez026",
+      "settore": "M-PSI/05",
+      "facolta": [
+        "Psicologia"
+      ],
+      "cfu": 12,
+      "transcript_path": "transcripts_all/740ed81c-08ef-430b-aed1-2ba854327a14_Lez026.txt"
+    },
+    "model": "phi4:latest",
+    "generated_at": "2026-10-07T15:03:56.140883",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sto cercando di capire come le nozioni di rappresentanza e rappresentatività nel diritto del lavoro si possano relazionare con l'influenza sociale nei contesti online, dove determinati individui o contenuti acquisiscono un peso particolare.",
+        "key_topics_course_a": [
+          "rappresentanza",
+          "rappresentatività"
+        ],
+        "key_topics_course_b": [
+          "influenza sociale"
+        ],
+        "conceptual_bridge": "Entrambi i concetti si basano sulla capacità di determinate entità (sindacati o individui) di influenzare gruppi più ampi attraverso il riconoscimento e la credibilità."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Vorrei approfondire come i metodi di misurazione della rappresentatività dei sindacati possano essere paragonati alle tecniche utilizzate per analizzare la viralità dei contenuti sui social media.",
+        "key_topics_course_a": [
+          "misurazione della rappresentatività"
+        ],
+        "key_topics_course_b": [
+          "analisi della viralità"
+        ],
+        "conceptual_bridge": "I metodi di misurazione e valutazione in entrambi i contesti si focalizzano su criteri selettivi che determinano l'influenza o il riconoscimento."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Mi appassiona l'intersezione tra il diritto del lavoro e la psicologia sociale online, specialmente come possa essere sviluppato un approccio integrato per gestire i conflitti aziendali attraverso piattaforme di social media.",
+        "key_topics_course_a": [
+          "diritto sindacale",
+          "contrattazione collettiva"
+        ],
+        "key_topics_course_b": [
+          "analisi delle relazioni sociali",
+          "influenza sociale"
+        ],
+        "conceptual_bridge": "Le competenze acquisite in entrambi i campi possono essere utilizzate per gestire e mediare conflitti aziendali tramite canali digitali."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Come si può applicare la comprensione della reputazione dei brand nel contesto delle piattaforme di social media per migliorare le relazioni sindacali e l'immagine pubblica delle organizzazioni lavorative?",
+        "key_topics_course_a": [
+          "diritti sindacali",
+          "promozione legislativa"
+        ],
+        "key_topics_course_b": [
+          "reputation analysis"
+        ],
+        "conceptual_bridge": "L'analisi della reputazione può essere utilizzata per migliorare le relazioni sindacali, influenzando positivamente la percezione pubblica delle organizzazioni lavorative."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sto pensando di combinare studi in diritto del lavoro e psicologia sociale per esplorare il ruolo dei social media nella gestione del lavoro moderno. Come potrei strutturare un piano di studi che mi permetta di sviluppare competenze interdisciplinari?",
+        "key_topics_course_a": [
+          "autonomia collettiva",
+          "diritti sindacali"
+        ],
+        "key_topics_course_b": [
+          "analisi delle relazioni sociali",
+          "caso studio"
+        ],
+        "conceptual_bridge": "Un piano di studi che integra questi corsi fornirà una prospettiva completa su come i media digitali influenzano le dinamiche del lavoro e delle organizzazioni."
+      }
+    ]
+  }
+]

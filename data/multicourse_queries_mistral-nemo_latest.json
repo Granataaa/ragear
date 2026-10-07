@@ -1,0 +1,469 @@
+[
+  {
+    "pair_id": "pair_1",
+    "course_a": {
+      "titoloCorso": "Lingua Inglese (edizione 2020)",
+      "titoloLezione": "Il futuro",
+      "lesson_uid": "159913db-2627-42d6-af67-98b04cdb7d91_Lesson5",
+      "settore": "L-LIN/12",
+      "facolta": [
+        "Giurisprudenza"
+      ],
+      "cfu": 4,
+      "transcript_path": "transcripts_all/159913db-2627-42d6-af67-98b04cdb7d91_Lesson5.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Fisica tecnica e impianti energetici",
+      "titoloLezione": "Elementi di illuminotecnica III",
+      "lesson_uid": "630a9add-518f-492f-9390-b26b3e45247e_Lez035",
+      "settore": "ING-IND/10",
+      "facolta": [
+        "Facoltà di Ingegneria on line"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/630a9add-518f-492f-9390-b26b3e45247e_Lez035.txt"
+    },
+    "model": "mistral-nemo:latest",
+    "generated_at": "2026-10-07T14:48:33.874935",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Vorrei capire come le regole grammaticali dell'italiano si applicano alle strutture sintattiche dell'inglese per migliorare la mia comprensione e pronuncia nella lingua inglese.",
+        "key_topics_course_a": [
+          "regole grammaticali",
+          "strutture sintattiche"
+        ],
+        "key_topics_course_b": [
+          "sistemi linguistici"
+        ],
+        "conceptual_bridge": "Entrambi i corsi esplorano il modo in cui le regole strutturano la comunicazione, sia attraverso la grammatica dell'italiano che attraverso l'apprendimento della lingua inglese."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Mi interessa capire come la luce e le sue proprietà ottiche possono essere utilizzate per migliorare l'efficienza energetica degli impianti di illuminazione.",
+        "key_topics_course_a": [
+          "luce",
+          "proprietà ottiche"
+        ],
+        "key_topics_course_b": [
+          "impianti energetici",
+          "efficienza energetica"
+        ],
+        "conceptual_bridge": "Entrambi i corsi si concentrano sull'utilizzo di tecnologie specifiche per migliorare l'efficienza e la resa dei sistemi, sia nell'apprendimento della lingua inglese che nell'ottimizzazione degli impianti energetici."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Mi appassiona l'intersezione tra il mio interesse per la lingua inglese e il mio obiettivo di lavorare nel campo dell'energetica, vorrei acquisire competenze su entrambi i campi per applicarle ad un progetto interdisciplinare.",
+        "key_topics_course_a": [
+          "lingua inglese",
+          "progetti interdisciplinari"
+        ],
+        "key_topics_course_b": [
+          "campo dell'energetica",
+          "competenze tecniche"
+        ],
+        "conceptual_bridge": "Entrambi i corsi offrono competenze preziose per il campo lavorativo dell'energetica, con l'apprendimento della lingua inglese che può essere utilizzata per comunicare efficacemente in ambito internazionale e la conoscenza degli impianti energetici che è fondamentale per il progetto di un sistema efficiente."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Mi sto imbattendo in difficoltà nell'apprendere la grammatica inglese mentre studio gli impianti energetici, vorrei trovare una strategia per integrare le competenze acquisite nei due corsi per affrontare meglio questo problema.",
+        "key_topics_course_a": [
+          "grammatica inglese",
+          "difficoltà nell'apprendimento"
+        ],
+        "key_topics_course_b": [
+          "impianti energetici",
+          "integrazione delle competenze"
+        ],
+        "conceptual_bridge": "Entrambi i corsi presentano sfide nell'acquisizione di nuove conoscenze, con la grammatica inglese che richiede una comprensione profonda della struttura linguistica e gli impianti energetici che necessitano di una buona padronanza dei concetti tecnici. Integrare queste competenze può aiutare a superare le difficoltà incontrate in entrambi i corsi."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sono indeciso su come strutturare il mio piano di studi per combinare l'apprendimento della lingua inglese con gli studi in fisica tecnica e impianti energetici, vorrei capire come organizzarli in modo da sfruttare al meglio le sinergie tra i due corsi.",
+        "key_topics_course_a": [
+          "apprendimento della lingua inglese",
+          "piano di studi"
+        ],
+        "key_topics_course_b": [
+          "fisica tecnica e impianti energetici",
+          "sinergie tra i corsi"
+        ],
+        "conceptual_bridge": "Entrambi i corsi offrono competenze preziose per il futuro professionale, con l'apprendimento della lingua inglese che può essere utilizzata per comunicare efficacemente in ambito internazionale e la conoscenza degli impianti energetici che è fondamentale per il progetto di un sistema efficiente."
+      }
+    ]
+  },
+  {
+    "pair_id": "pair_2",
+    "course_a": {
+      "titoloCorso": "Tecnologie e sostegno alla persona",
+      "titoloLezione": "Il bilinguismo bimodale",
+      "lesson_uid": "1ed27613-1c95-4f4a-835b-f5fb4e0fa543_Rinaldi_Lez002",
+      "settore": "M-PSI/08",
+      "facolta": [
+        "Psicologia"
+      ],
+      "cfu": 10,
+      "transcript_path": "transcripts_all/1ed27613-1c95-4f4a-835b-f5fb4e0fa543_Rinaldi_Lez002.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Digital and Social Media Management",
+      "titoloLezione": "STORYTELLING: NARRAZIONI E CONTENUTI CROSSMEDIALI",
+      "lesson_uid": "eb8b25ed-dd89-4be5-9084-85141cf41545_Lez009",
+      "settore": "SPS/08",
+      "facolta": [
+        "Scienze della Comunicazione"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/eb8b25ed-dd89-4be5-9084-85141cf41545_Lez009.txt"
+    },
+    "model": "mistral-nemo:latest",
+    "generated_at": "2026-10-07T14:50:00.363981",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sto cercando di capire come le competenze linguistiche e comunicative acquisite nel corso di Tecnologie e sostegno alla persona possano essere utilizzate per la costruzione di una narrazione efficace nello storytelling, come trattato nel corso Digital and Social Media Management.",
+        "key_topics_course_a": [
+          "bilinguismo bimodale",
+          "lingue dei segni"
+        ],
+        "key_topics_course_b": [
+          "storytelling",
+          "narrativa"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano di comunicazione e linguaggio, uno attraverso l'utilizzo delle lingue dei segni e il bilinguismo bimodale, l'altro attraverso la costruzione di narrazioni emotive nel digitale."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Mi interesserebbe capire come le tecnologie utilizzate per supportare le persone con disabilità uditive possono essere integrate con gli strumenti digitali di storytelling, come quelli descritti nel corso Digital and Social Media Management.",
+        "key_topics_course_a": [
+          "tecnologie",
+          "sostegno alla persona"
+        ],
+        "key_topics_course_b": [
+          "strumenti digitali",
+          "storytelling"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano di tecnologie e strumenti digitali, uno per il sostegno alle persone con disabilità uditive, l'altro per la creazione di contenuti cross-mediali."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Vorrei capire come le competenze acquisite nel corso Tecnologie e sostegno alla persona possano essere utilizzate in un lavoro di team con professionisti del digital marketing, per creare campagne di storytelling accessibili a persone con disabilità uditive.",
+        "key_topics_course_a": [
+          "tecnologie",
+          "sostegno alla persona"
+        ],
+        "key_topics_course_b": [
+          "digital marketing",
+          "campagne di storytelling"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano di professioni e applicazione delle competenze acquisite, uno nel campo del sostegno alle persone con disabilità uditive, l'altro nel digital marketing e nella creazione di campagne di storytelling."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Mi serve aiuto per capire come risolvere il problema dell'accessibilità delle narrazioni cross-mediali create nel corso Digital and Social Media Management per persone con disabilità uditive, utilizzando le conoscenze acquisite nel corso Tecnologie e sostegno alla persona.",
+        "key_topics_course_a": [
+          "disabilità uditive",
+          "accessibilità"
+        ],
+        "key_topics_course_b": [
+          "narrazioni cross-mediali",
+          "problem-solving"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano di problematiche da risolvere, uno nell'accessibilità per persone con disabilità uditive, l'altro nella creazione di narrazioni cross-mediali."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sto cercando di decidere tra i due corsi, Tecnologie e sostegno alla persona e Digital and Social Media Management. Quale dei due mi fornirà competenze più utili per una carriera nel campo della creazione di contenuti accessibili e inclusivi?",
+        "key_topics_course_a": [
+          "tecnologie",
+          "sostegno alla persona"
+        ],
+        "key_topics_course_b": [
+          "creazione di contenuti",
+          "accessibilità"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano di competenze utili per una carriera nel campo della creazione di contenuti, uno con un focus sull'accessibilità e l'inclusione, l'altro sulla creazione di narrazioni emotive."
+      }
+    ]
+  },
+  {
+    "pair_id": "pair_3",
+    "course_a": {
+      "titoloCorso": "Comunicazione delle aziende turistiche",
+      "titoloLezione": "Internet e turismo",
+      "lesson_uid": "c6bd78de-a384-47ee-a71e-5ababf12f965_Lez006",
+      "settore": "SECS-P/08",
+      "facolta": [
+        "Economia"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/c6bd78de-a384-47ee-a71e-5ababf12f965_Lez006.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Interventi clinici per l’infanzia e per l’adolescenza",
+      "titoloLezione": "I disturbi dello spettro autistico",
+      "lesson_uid": "194ae754-8b9f-4cba-b110-3ca422b74fe2_Lez004",
+      "settore": "M-PSI/07",
+      "facolta": [
+        "Psicologia"
+      ],
+      "cfu": 8,
+      "transcript_path": "transcripts_all/194ae754-8b9f-4cba-b110-3ca422b74fe2_Lez004.txt"
+    },
+    "model": "mistral-nemo:latest",
+    "generated_at": "2026-10-07T14:51:32.813250",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sto cercando un corso che mi permetta di comprendere come l'evoluzione del digitale sta influenzando la comunicazione delle aziende turistiche e anche come questo cambiamento può avere effetti sulle relazioni sociali e interazioni dei clienti con le imprese.",
+        "key_topics_course_a": [
+          "Internet e turismo",
+          "Turisti digitali"
+        ],
+        "key_topics_course_b": [
+          "Disturbi dello spettro autistico",
+          "Relazioni sociali"
+        ],
+        "conceptual_bridge": "Entrambi i corsi affrontano il tema delle relazioni sociali, uno dal punto di vista della comunicazione aziendale e l'altro dalla prospettiva dei disturbi dello spettro autistico. Comprendere come queste relazioni si sviluppano e cambiano in entrambi i contesti può fornire una comprensione più completa del comportamento umano."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Mi appassiona l'intersezione tra la comunicazione delle aziende turistiche online e le tecniche di terapia per i disturbi dello spettro autistico. Vorrei acquisire competenze su come utilizzare gli strumenti digitali per migliorare la comunicazione e l'interazione sociale in entrambi i contesti.",
+        "key_topics_course_a": [
+          "Internet e turismo",
+          "Turisti digitali"
+        ],
+        "key_topics_course_b": [
+          "Terapie per disturbi dello spettro autistico",
+          "Tecniche di interazione sociale"
+        ],
+        "conceptual_bridge": "Entrambi i corsi si concentrano sull'utilizzo degli strumenti digitali e sulle tecniche di comunicazione. Applicare queste competenze in entrambi i contesti può aiutare a migliorare l'interazione sociale e la comprensione tra le persone."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Vorrei acquisire competenze su come gestire il turismo accessibile per persone con disturbi dello spettro autistico. Mi interessa capire come la comunicazione delle aziende turistiche può essere adattata per includere e accogliere questo pubblico.",
+        "key_topics_course_a": [
+          "Internet e turismo",
+          "Turisti digitali"
+        ],
+        "key_topics_course_b": [
+          "Disturbi dello spettro autistico",
+          "Turismo accessibile"
+        ],
+        "conceptual_bridge": "Entrambi i corsi si concentrano sull'inclusione di diverse tipologie di pubblico. Applicare le competenze acquisite in entrambi i contesti può aiutare a creare un'esperienza turistica più inclusiva e accessibile."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Sto cercando di capire come affrontare il problema della scarsa comunicazione tra le aziende turistiche e i turisti con disturbi dello spettro autistico. Vorrei acquisire competenze su come utilizzare gli strumenti digitali per migliorare la comunicazione e l'interazione sociale in entrambi i contesti.",
+        "key_topics_course_a": [
+          "Internet e turismo",
+          "Turisti digitali"
+        ],
+        "key_topics_course_b": [
+          "Disturbi dello spettro autistico",
+          "Tecniche di interazione sociale"
+        ],
+        "conceptual_bridge": "Entrambi i corsi affrontano il problema della scarsa comunicazione tra le persone. Utilizzare gli strumenti digitali e le tecniche di comunicazione acquisite in entrambi i contesti può aiutare a migliorare la comprensione reciproca."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sono indeciso su come strutturare il mio piano di studi per combinare gli interessi nella comunicazione delle aziende turistiche e nei disturbi dello spettro autistico. Vorrei capire come posso utilizzare le competenze acquisite in entrambi i corsi per creare un'esperienza turistica più inclusiva e accessibile.",
+        "key_topics_course_a": [
+          "Internet e turismo",
+          "Turisti digitali"
+        ],
+        "key_topics_course_b": [
+          "Disturbi dello spettro autistico",
+          "Turismo accessibile"
+        ],
+        "conceptual_bridge": "Entrambi i corsi si concentrano sull'inclusione di diverse tipologie di pubblico. Utilizzare le competenze acquisite in entrambi i contesti può aiutare a creare un'esperienza turistica più inclusiva e accessibile."
+      }
+    ]
+  },
+  {
+    "pair_id": "pair_4",
+    "course_a": {
+      "titoloCorso": "Diritto dei media digitali e delle istituzioni",
+      "titoloLezione": "SERVIZIO UNIVERSALE E CITTADINANZA DIGITALE",
+      "lesson_uid": "11dc2fe2-ad3e-403f-b039-26897cb9f3f7_Lez007",
+      "settore": "Diritto dei media digitali e delle istituzioni",
+      "facolta": [
+        "Psicologia",
+        "Scienze della Comunicazione"
+      ],
+      "cfu": 8,
+      "transcript_path": "transcripts_all/11dc2fe2-ad3e-403f-b039-26897cb9f3f7_Lez007.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Comunicazione d’impresa nel mondo digitale",
+      "titoloLezione": "Influencer marketing",
+      "lesson_uid": "0a33ed82-c637-40a3-9264-5107134bdbf5_Lez013",
+      "settore": "SPS/08",
+      "facolta": [
+        "Scienze della Comunicazione"
+      ],
+      "cfu": 8,
+      "transcript_path": "transcripts_all/0a33ed82-c637-40a3-9264-5107134bdbf5_Lez013.txt"
+    },
+    "model": "mistral-nemo:latest",
+    "generated_at": "2026-10-07T14:52:43.331644",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sono interessato alla nozione di cittadinanza digitale e mi piacerebbe capire come questa si integra con l'idea di servizio universale nella comunicazione d'impresa nel mondo digitale.",
+        "key_topics_course_a": [
+          "cittadinanza digitale",
+          "servizio universale"
+        ],
+        "key_topics_course_b": [
+          "comunicazione d'impresa",
+          "mondo digitale"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano di concetti fondamentali che riguardano la comunicazione e l'accesso alle informazioni nel mondo moderno."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Vorrei sapere come utilizzare gli strumenti dell'influencer marketing per garantire un servizio universale di qualità a prezzi abbordabili.",
+        "key_topics_course_a": [
+          "strumenti influencer marketing",
+          "servizio universale"
+        ],
+        "key_topics_course_b": [
+          "qualità",
+          "prezzi abbordabili"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano di tecnologie e strumenti che possono essere utilizzati per garantire l'accesso a servizi di qualità."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Mi interessa capire come le comunità online possono contribuire alla creazione di un servizio universale nella comunicazione d'impresa nel mondo digitale.",
+        "key_topics_course_a": [
+          "comunità online",
+          "servizio universale"
+        ],
+        "key_topics_course_b": [
+          "comunicazione d'impresa",
+          "mondo digitale"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano di come le comunità e le aziende possono interagire per creare servizi di comunicazione di qualità."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Come posso affrontare il problema dell'accesso equo alle informazioni digitali utilizzando gli strumenti dell'influencer marketing?",
+        "key_topics_course_a": [
+          "accesso equo",
+          "informazioni digitali"
+        ],
+        "key_topics_course_b": [
+          "strumenti influencer marketing"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano di problemi legati all'accesso alle informazioni e alla comunicazione, con l'obiettivo di trovare soluzioni efficaci."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sono indeciso su quale corso scegliere tra Diritto dei media digitali e delle istituzioni e Comunicazione d'impresa nel mondo digitale. Mi piacerebbe capire come questi due corsi si integrano tra di loro.",
+        "key_topics_course_a": [
+          "Diritto dei media digitali e delle istituzioni"
+        ],
+        "key_topics_course_b": [
+          "Comunicazione d'impresa nel mondo digitale"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano di aspetti importanti della comunicazione e del diritto nel mondo moderno, offrendo una base solida per la comprensione delle sfide future."
+      }
+    ]
+  },
+  {
+    "pair_id": "pair_5",
+    "course_a": {
+      "titoloCorso": "Diritto del Lavoro",
+      "titoloLezione": "Autonomia collettiva: rappresentanza e rappresentatività",
+      "lesson_uid": "3bdf4509-3e29-412c-9623-3dd0ccd3c8fb_Lez006",
+      "settore": "Diritto del Lavoro",
+      "facolta": [
+        "Economia"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/3bdf4509-3e29-412c-9623-3dd0ccd3c8fb_Lez006.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Psicologia sociale delle relazioni in rete",
+      "titoloLezione": "L’analisi delle relazioni sociali: alcuni casi studio",
+      "lesson_uid": "740ed81c-08ef-430b-aed1-2ba854327a14_Lez026",
+      "settore": "M-PSI/05",
+      "facolta": [
+        "Psicologia"
+      ],
+      "cfu": 12,
+      "transcript_path": "transcripts_all/740ed81c-08ef-430b-aed1-2ba854327a14_Lez026.txt"
+    },
+    "model": "mistral-nemo:latest",
+    "generated_at": "2026-10-07T14:54:15.854601",
+    "queries": [
+      {
+        "type": "fondazionale",
+        "query_text": "Sto cercando di capire meglio la rappresentanza sindacale e mi interessa anche l'analisi delle relazioni sociali nei gruppi online. Come si può applicare la teoria della rappresentatività ai gruppi di discussione sui social media?",
+        "key_topics_course_a": [
+          "rappresentanza",
+          "rappresentatività"
+        ],
+        "key_topics_course_b": [
+          "relazioni sociali",
+          "gruppi online"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano il concetto di rappresentanza e relazioni tra individui, ma in contesti diversi: il diritto del lavoro e la psicologia sociale delle relazioni in rete. Mi chiedo come si possa applicare la teoria della rappresentatività ai gruppi online."
+      },
+      {
+        "type": "tecnica",
+        "query_text": "Mi interessano le tecniche di analisi dei contenuti virali nei social media e mi piacerebbe capire meglio come queste tecniche possono essere utilizzate per valutare la rappresentatività delle organizzazioni sindacali.",
+        "key_topics_course_a": [
+          "analisi dei contenuti virali",
+          "viralità"
+        ],
+        "key_topics_course_b": [
+          "rappresentanza",
+          "rappresentatività"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano tecniche di analisi e misurazione: il primo si concentra sulla viralità dei contenuti sui social media, mentre il secondo tratta della rappresentanza e rappresentatività delle organizzazioni sindacali. Mi chiedo come si possa utilizzare l'analisi dei contenuti virali per valutare la rappresentatività delle organizzazioni sindacali."
+      },
+      {
+        "type": "applicativa",
+        "query_text": "Mi appassiona il mondo del lavoro e mi interessa capire come le relazioni sociali online possono influenzare la dinamica dei rapporti di lavoro. Vorrei acquisire competenze su come gestire i conflitti e le controversie tra lavoratori e datori di lavoro in un contesto digitale.",
+        "key_topics_course_a": [
+          "rapporti di lavoro",
+          "conflitti"
+        ],
+        "key_topics_course_b": [
+          "relazioni sociali",
+          "influenza sociale"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano relazioni tra individui, ma in contesti diversi: il diritto del lavoro si concentra sui rapporti tra lavoratori e datori di lavoro, mentre la psicologia sociale delle relazioni in rete si focalizza sull'influenza sociale nei gruppi online. Mi chiedo come si possa applicare la conoscenza dell'influenza sociale per gestire i conflitti e le controversie tra lavoratori e datori di lavoro in un contesto digitale."
+      },
+      {
+        "type": "problem_solving",
+        "query_text": "Mi interessa capire come si possono utilizzare le tecniche di analisi dei contenuti virali per prevenire o gestire i conflitti tra organizzazioni sindacali e datori di lavoro.",
+        "key_topics_course_a": [
+          "analisi dei contenuti virali",
+          "viralità"
+        ],
+        "key_topics_course_b": [
+          "rapporti di lavoro",
+          "conflitti"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano tecniche di analisi e gestione dei conflitti: il primo si concentra sulla viralità dei contenuti sui social media, mentre il secondo tratta dei rapporti tra lavoratori e datori di lavoro. Mi chiedo come si possa utilizzare l'analisi dei contenuti virali per prevenire o gestire i conflitti tra organizzazioni sindacali e datori di lavoro."
+      },
+      {
+        "type": "orientamento",
+        "query_text": "Sono indeciso su quale corso scegliere e mi interessano entrambi i temi trattati. Vorrei capire come strutturare il mio piano di studi per combinare questi due ambiti nel mio futuro professionale.",
+        "key_topics_course_a": [
+          "diritto del lavoro",
+          "rappresentanza"
+        ],
+        "key_topics_course_b": [
+          "psicologia sociale delle relazioni in rete",
+          "analisi delle relazioni sociali"
+        ],
+        "conceptual_bridge": "Entrambi i corsi trattano temi importanti per il mio futuro professionale, ma mi chiedo come poter combinare questi due ambiti nel mio piano di studi."
+      }
+    ]
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "pair_id": "pair_1",
+    "course_a": {
+      "titoloCorso": "Lingua Inglese (edizione 2020)",
+      "titoloLezione": "Il futuro",
+      "lesson_uid": "159913db-2627-42d6-af67-98b04cdb7d91_Lesson5",
+      "settore": "L-LIN/12",
+      "facolta": [
+        "Giurisprudenza"
+      ],
+      "cfu": 4,
+      "transcript_path": "transcripts_all/159913db-2627-42d6-af67-98b04cdb7d91_Lesson5.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Fisica tecnica e impianti energetici",
+      "titoloLezione": "Elementi di illuminotecnica III",
+      "lesson_uid": "630a9add-518f-492f-9390-b26b3e45247e_Lez035",
+      "settore": "ING-IND/10",
+      "facolta": [
+        "Facoltà di Ingegneria on line"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/630a9add-518f-492f-9390-b26b3e45247e_Lez035.txt"
+    }
+  },
+  {
+    "pair_id": "pair_2",
+    "course_a": {
+      "titoloCorso": "Tecnologie e sostegno alla persona",
+      "titoloLezione": "Il bilinguismo bimodale",
+      "lesson_uid": "1ed27613-1c95-4f4a-835b-f5fb4e0fa543_Rinaldi_Lez002",
+      "settore": "M-PSI/08",
+      "facolta": [
+        "Psicologia"
+      ],
+      "cfu": 10,
+      "transcript_path": "transcripts_all/1ed27613-1c95-4f4a-835b-f5fb4e0fa543_Rinaldi_Lez002.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Digital and Social Media Management",
+      "titoloLezione": "STORYTELLING: NARRAZIONI E CONTENUTI CROSSMEDIALI",
+      "lesson_uid": "eb8b25ed-dd89-4be5-9084-85141cf41545_Lez009",
+      "settore": "SPS/08",
+      "facolta": [
+        "Scienze della Comunicazione"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/eb8b25ed-dd89-4be5-9084-85141cf41545_Lez009.txt"
+    }
+  },
+  {
+    "pair_id": "pair_3",
+    "course_a": {
+      "titoloCorso": "Comunicazione delle aziende turistiche",
+      "titoloLezione": "Internet e turismo",
+      "lesson_uid": "c6bd78de-a384-47ee-a71e-5ababf12f965_Lez006",
+      "settore": "SECS-P/08",
+      "facolta": [
+        "Economia"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/c6bd78de-a384-47ee-a71e-5ababf12f965_Lez006.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Interventi clinici per l’infanzia e per l’adolescenza",
+      "titoloLezione": "I disturbi dello spettro autistico",
+      "lesson_uid": "194ae754-8b9f-4cba-b110-3ca422b74fe2_Lez004",
+      "settore": "M-PSI/07",
+      "facolta": [
+        "Psicologia"
+      ],
+      "cfu": 8,
+      "transcript_path": "transcripts_all/194ae754-8b9f-4cba-b110-3ca422b74fe2_Lez004.txt"
+    }
+  },
+  {
+    "pair_id": "pair_4",
+    "course_a": {
+      "titoloCorso": "Diritto dei media digitali e delle istituzioni",
+      "titoloLezione": "SERVIZIO UNIVERSALE E CITTADINANZA DIGITALE",
+      "lesson_uid": "11dc2fe2-ad3e-403f-b039-26897cb9f3f7_Lez007",
+      "settore": "Diritto dei media digitali e delle istituzioni",
+      "facolta": [
+        "Psicologia",
+        "Scienze della Comunicazione"
+      ],
+      "cfu": 8,
+      "transcript_path": "transcripts_all/11dc2fe2-ad3e-403f-b039-26897cb9f3f7_Lez007.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Comunicazione d’impresa nel mondo digitale",
+      "titoloLezione": "Influencer marketing",
+      "lesson_uid": "0a33ed82-c637-40a3-9264-5107134bdbf5_Lez013",
+      "settore": "SPS/08",
+      "facolta": [
+        "Scienze della Comunicazione"
+      ],
+      "cfu": 8,
+      "transcript_path": "transcripts_all/0a33ed82-c637-40a3-9264-5107134bdbf5_Lez013.txt"
+    }
+  },
+  {
+    "pair_id": "pair_5",
+    "course_a": {
+      "titoloCorso": "Diritto del Lavoro",
+      "titoloLezione": "Autonomia collettiva: rappresentanza e rappresentatività",
+      "lesson_uid": "3bdf4509-3e29-412c-9623-3dd0ccd3c8fb_Lez006",
+      "settore": "Diritto del Lavoro",
+      "facolta": [
+        "Economia"
+      ],
+      "cfu": 9,
+      "transcript_path": "transcripts_all/3bdf4509-3e29-412c-9623-3dd0ccd3c8fb_Lez006.txt"
+    },
+    "course_b": {
+      "titoloCorso": "Psicologia sociale delle relazioni in rete",
+      "titoloLezione": "L’analisi delle relazioni sociali: alcuni casi studio",
+      "lesson_uid": "740ed81c-08ef-430b-aed1-2ba854327a14_Lez026",
+      "settore": "M-PSI/05",
+      "facolta": [
+        "Psicologia"
+      ],
+      "cfu": 12,
+      "transcript_path": "transcripts_all/740ed81c-08ef-430b-aed1-2ba854327a14_Lez026.txt"
+    }
+  }
+]
